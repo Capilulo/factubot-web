@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FACTUBOT | Facturacion automatica por WhatsApp</title>
+    <meta
+      name="description"
+      content="FACTUBOT automatiza la facturacion electronica con firma digital, WhatsApp y autorizacion SRI en minutos."
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Sora:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: "#10b981",
+              dark: "#0f172a",
+            },
+            fontFamily: {
+              display: ["Sora", "ui-sans-serif", "system-ui"],
+              body: ["Manrope", "ui-sans-serif", "system-ui"],
+            },
+            boxShadow: {
+              glow: "0 0 0 1px rgba(16,185,129,0.6), 0 0 40px rgba(16,185,129,0.35)",
+            },
+            backgroundImage: {
+              "hero-radial":
+                "radial-gradient(60% 60% at 50% 0%, rgba(16,185,129,0.35), rgba(15,23,42,0))",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body class="bg-dark text-slate-100 antialiased font-body">
+    <!-- Background atmosphere -->
+    <div class="pointer-events-none fixed inset-0 -z-10">
+      <div class="absolute -top-32 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-emerald-500/20 blur-3xl"></div>
+      <div class="absolute top-1/3 right-0 h-80 w-80 rounded-full bg-cyan-500/20 blur-3xl"></div>
+      <div class="absolute inset-0 bg-hero-radial"></div>
+      <svg
+        class="absolute inset-0 h-full w-full opacity-[0.08]"
+        viewBox="0 0 1200 600"
+        aria-hidden="true"
+      >
+        <defs>
+          <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+            <path d="M 48 0 L 0 0 0 48" fill="none" stroke="white" stroke-width="1" />
+          </pattern>
+        </defs>
+        <rect width="1200" height="600" fill="url(#grid)" />
+      </svg>
+    </div>
+
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-white/5 backdrop-blur-xl">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 md:px-6">
+        <a
+          href="#inicio"
+          class="text-xl font-black tracking-tighter text-white font-display"
+          aria-label="FACTUBOT"
+        >
+          FACTUBOT
+        </a>
+
+        <nav class="hidden items-center gap-8 text-sm font-medium md:flex">
+          <a class="text-white/80 transition hover:text-white" href="#pasos">Proceso</a>
+          <a class="text-white/80 transition hover:text-white" href="#pricing">Precio</a>
+          <a class="text-white/80 transition hover:text-white" href="#faq">FAQ</a>
+          <a
+            class="rounded-full bg-brand px-5 py-2 text-sm font-semibold text-dark shadow-glow transition hover:-translate-y-0.5"
+            href="#pricing"
+          >
+            Empezar ahora
+          </a>
+        </nav>
+
+        <button
+          id="menu-btn"
+          class="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 p-2 text-white md:hidden"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Abrir menu"
+        >
+          <i id="icon-open" data-lucide="menu" class="h-5 w-5"></i>
+          <i id="icon-close" data-lucide="x" class="hidden h-5 w-5"></i>
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden border-t border-white/10 bg-dark/80 md:hidden">
+        <div class="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-4 text-sm">
+          <a class="text-white/80 transition hover:text-white" href="#pasos">Proceso</a>
+          <a class="text-white/80 transition hover:text-white" href="#pricing">Precio</a>
+          <a class="text-white/80 transition hover:text-white" href="#faq">FAQ</a>
+          <a
+            class="rounded-full bg-brand px-5 py-2 text-center font-semibold text-dark shadow-glow"
+            href="#pricing"
+          >
+            Empezar ahora
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section id="inicio" class="px-4 pb-20 pt-16 md:px-6">
+        <div class="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2">
+          <div>
+            <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.2em] text-white/70">
+              <span class="h-2 w-2 rounded-full bg-brand"></span>
+              Facturacion sin friccion
+            </div>
+            <h1 class="mt-6 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl font-display">
+              Automatiza tu facturacion con
+              <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
+                FACTUBOT
+              </span>
+            </h1>
+            <p class="mt-6 max-w-xl text-base text-white/70 md:text-lg">
+              Conecta tu firma digital, recibe pedidos por WhatsApp y envia facturas autorizadas por el SRI en minutos. Todo desde un panel claro y seguro.
+            </p>
+
+            <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+              <a
+                href="#pricing"
+                class="rounded-full bg-brand px-8 py-3 text-center text-sm font-semibold text-dark shadow-glow transition hover:-translate-y-0.5"
+              >
+                Probar FACTUBOT
+              </a>
+              <a
+                href="#pasos"
+                class="rounded-full border border-white/20 px-8 py-3 text-center text-sm font-semibold text-white/90 transition hover:border-white/40"
+              >
+                Ver como funciona
+              </a>
+            </div>
+
+            <div class="mt-10 grid gap-4 sm:grid-cols-2">
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                <p class="text-sm text-white/70">Tiempo promedio</p>
+                <p class="mt-2 text-2xl font-semibold">&lt; 3 min</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                <p class="text-sm text-white/70">Integracion SRI</p>
+                <p class="mt-2 text-2xl font-semibold">100% automatizada</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating chat panel -->
+          <div class="relative">
+            <div class="absolute -inset-8 rounded-[32px] bg-white/5 blur-2xl"></div>
+            <div class="relative rounded-[28px] border border-white/10 bg-slate-900/80 p-6 shadow-xl">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-sm font-semibold">FACTUBOT</p>
+                  <p class="text-xs text-white/60">WhatsApp Flow</p>
+                </div>
+                <span class="rounded-full bg-emerald-500/20 px-3 py-1 text-xs text-emerald-300">En linea</span>
+              </div>
+
+              <div class="mt-6 space-y-4">
+                <div class="w-fit max-w-[80%] rounded-2xl rounded-bl-sm bg-white/10 px-4 py-3 text-sm text-white/80">
+                  Hola! Cual es el RUC y monto de la factura?
+                </div>
+                <div class="ml-auto w-fit max-w-[80%] rounded-2xl rounded-br-sm bg-emerald-500/20 px-4 py-3 text-sm text-emerald-100">
+                  RUC 1790000000, total 125.50
+                </div>
+                <div class="w-fit max-w-[80%] rounded-2xl rounded-bl-sm bg-white/10 px-4 py-3 text-sm text-white/80">
+                  Factura generada y enviada. Numero 000123.
+                </div>
+              </div>
+
+              <div class="mt-6 grid grid-cols-3 gap-3">
+                <div class="rounded-xl border border-white/10 bg-white/5 p-3 text-center text-xs text-white/70">
+                  PDF
+                </div>
+                <div class="rounded-xl border border-white/10 bg-white/5 p-3 text-center text-xs text-white/70">
+                  XML
+                </div>
+                <div class="rounded-xl border border-white/10 bg-white/5 p-3 text-center text-xs text-white/70">
+                  SRI OK
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Steps -->
+      <section id="pasos" class="px-4 py-20 md:px-6">
+        <div class="mx-auto max-w-6xl">
+          <div class="max-w-2xl">
+            <p class="text-sm uppercase tracking-[0.2em] text-white/60">Proceso en 3 pasos</p>
+            <h2 class="mt-4 text-3xl font-semibold md:text-4xl font-display">Configura FACTUBOT en minutos</h2>
+            <p class="mt-4 text-white/70">
+              Un flujo simple para que tu equipo facture sin errores y con visibilidad total.
+            </p>
+          </div>
+
+          <div class="mt-12 grid gap-6 md:grid-cols-3">
+            <article class="group rounded-3xl border border-white/10 bg-white/5 p-6 transition-transform duration-300 hover:scale-105">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-500/20">
+                <i data-lucide="key-round" class="h-6 w-6 text-emerald-300"></i>
+              </div>
+              <h3 class="mt-6 text-xl font-semibold">1. Firma .p12</h3>
+              <p class="mt-3 text-sm text-white/70">
+                Carga tu certificado y deja la firma digital protegida dentro de FACTUBOT.
+              </p>
+            </article>
+
+            <article class="group rounded-3xl border border-white/10 bg-white/5 p-6 transition-transform duration-300 hover:scale-105">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-500/20">
+                <i data-lucide="message-circle" class="h-6 w-6 text-cyan-300"></i>
+              </div>
+              <h3 class="mt-6 text-xl font-semibold">2. WhatsApp</h3>
+              <p class="mt-3 text-sm text-white/70">
+                Recibe pedidos y datos de facturacion desde un canal seguro y automatizado.
+              </p>
+            </article>
+
+            <article class="group rounded-3xl border border-white/10 bg-white/5 p-6 transition-transform duration-300 hover:scale-105">
+              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-500/20">
+                <i data-lucide="badge-check" class="h-6 w-6 text-emerald-300"></i>
+              </div>
+              <h3 class="mt-6 text-xl font-semibold">3. Autorizacion SRI</h3>
+              <p class="mt-3 text-sm text-white/70">
+                Envios instantaneos con respuesta en tiempo real y control de estado.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing -->
+      <section id="pricing" class="px-4 pb-24 md:px-6">
+        <div class="mx-auto max-w-5xl text-center">
+          <p class="text-sm uppercase tracking-[0.2em] text-white/60">Plan Pro</p>
+          <h2 class="mt-4 text-3xl font-semibold md:text-4xl font-display">Listo para escalar tu facturacion?</h2>
+          <p class="mt-4 text-white/70">
+            Todo lo que necesitas para operar con seguridad y velocidad.
+          </p>
+
+          <div class="mt-10 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/70">
+            <span class="h-2 w-2 rounded-full bg-brand"></span>
+            500+ negocios facturan con FACTUBOT cada mes
+          </div>
+
+          <div class="mt-10 rounded-3xl border border-emerald-400/40 bg-slate-900/80 p-8 text-left shadow-glow">
+            <div class="flex flex-col items-start justify-between gap-6 md:flex-row">
+              <div>
+                <h3 class="text-2xl font-semibold">FACTUBOT Pro</h3>
+                <p class="mt-2 text-sm text-white/70">
+                  Facturacion automatica, soporte prioritario y analytics en tiempo real.
+                </p>
+                <ul class="mt-6 space-y-3 text-sm text-white/70">
+                  <li class="flex items-center gap-3">
+                    <i data-lucide="check-circle-2" class="h-5 w-5 text-emerald-300"></i>
+                    Certificados .p12 ilimitados
+                  </li>
+                  <li class="flex items-center gap-3">
+                    <i data-lucide="check-circle-2" class="h-5 w-5 text-emerald-300"></i>
+                    WhatsApp Flow + integracion ERP
+                  </li>
+                  <li class="flex items-center gap-3">
+                    <i data-lucide="check-circle-2" class="h-5 w-5 text-emerald-300"></i>
+                    Monitoreo de autorizacion SRI
+                  </li>
+                </ul>
+              </div>
+              <div class="w-full max-w-xs rounded-2xl border border-white/10 bg-white/5 p-6">
+                <p class="text-sm text-white/60">Desde</p>
+                <p class="mt-2 text-4xl font-semibold">$49</p>
+                <p class="text-sm text-white/60">/ mes</p>
+                <div class="mt-6">
+                  <div id="pp-button" class="w-full"></div>
+                  <!-- `` -->
+                </div>
+                <p class="mt-4 text-xs text-white/60">Cancelacion flexible. Sin costos ocultos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="px-4 pb-20 md:px-6">
+        <div class="mx-auto max-w-4xl">
+          <div class="text-center">
+            <p class="text-sm uppercase tracking-[0.2em] text-white/60">FAQ</p>
+            <h2 class="mt-4 text-3xl font-semibold md:text-4xl font-display">Preguntas frecuentes</h2>
+          </div>
+
+          <div class="mt-10 space-y-4">
+            <details class="group rounded-2xl border border-white/10 bg-white/5 p-6">
+              <summary class="flex cursor-pointer list-none items-center justify-between text-base font-semibold">
+                Cuanto tarda la integracion?
+                <i data-lucide="chevron-down" class="h-5 w-5 transition group-open:rotate-180"></i>
+              </summary>
+              <p class="mt-4 text-sm text-white/70">
+                El onboarding promedio toma menos de 24 horas con soporte guiado y validacion SRI.
+              </p>
+            </details>
+
+            <details class="group rounded-2xl border border-white/10 bg-white/5 p-6">
+              <summary class="flex cursor-pointer list-none items-center justify-between text-base font-semibold">
+                Es compatible con cualquier ERP?
+                <i data-lucide="chevron-down" class="h-5 w-5 transition group-open:rotate-180"></i>
+              </summary>
+              <p class="mt-4 text-sm text-white/70">
+                Si. FACTUBOT conecta via API y webhooks con los ERP mas usados o con integraciones a medida.
+              </p>
+            </details>
+
+            <details class="group rounded-2xl border border-white/10 bg-white/5 p-6">
+              <summary class="flex cursor-pointer list-none items-center justify-between text-base font-semibold">
+                Que soporte incluye el plan Pro?
+                <i data-lucide="chevron-down" class="h-5 w-5 transition group-open:rotate-180"></i>
+              </summary>
+              <p class="mt-4 text-sm text-white/70">
+                Incluye soporte prioritario, monitoreo de envios y reportes semanales de rendimiento.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 px-4 py-12 md:px-6">
+      <div class="mx-auto grid max-w-6xl gap-8 md:grid-cols-4">
+        <div>
+          <p class="text-lg font-semibold font-display">FACTUBOT</p>
+          <p class="mt-3 text-sm text-white/60">
+            Facturacion automatica para negocios que quieren crecer sin friccion.
+          </p>
+        </div>
+        <div>
+          <p class="text-sm font-semibold">Producto</p>
+          <ul class="mt-3 space-y-2 text-sm text-white/60">
+            <li><a href="#pasos" class="transition hover:text-white">Proceso</a></li>
+            <li><a href="#pricing" class="transition hover:text-white">Precio</a></li>
+            <li><a href="#faq" class="transition hover:text-white">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-sm font-semibold">Legal</p>
+          <ul class="mt-3 space-y-2 text-sm text-white/60">
+            <li><a href="terminos.html" class="transition hover:text-white">Terminos</a></li>
+            <li><a href="privacidad.html" class="transition hover:text-white">Privacidad</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-sm font-semibold">Contacto</p>
+          <ul class="mt-3 space-y-2 text-sm text-white/60">
+            <li>hola@factubot.net</li>
+            <li>+593 963450243</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mx-auto mt-10 max-w-6xl text-xs text-white/50">
+        (c) 2026 FACTUBOT. Todos los derechos reservados.
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const iconOpen = document.getElementById("icon-open");
+      const iconClose = document.getElementById("icon-close");
+
+      const toggleMenu = () => {
+        const isOpen = !mobileMenu.classList.contains("hidden");
+        mobileMenu.classList.toggle("hidden");
+        iconOpen.classList.toggle("hidden", !isOpen);
+        iconClose.classList.toggle("hidden", isOpen);
+        menuBtn.setAttribute("aria-expanded", String(!isOpen));
+      };
+
+      menuBtn.addEventListener("click", toggleMenu);
+      mobileMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          if (!mobileMenu.classList.contains("hidden")) {
+            toggleMenu();
+          }
+        });
+      });
+
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

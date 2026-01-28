@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FACTUBOT | Eliminacion de Datos</title>
+    <meta
+      name="description"
+      content="Instrucciones para solicitar la eliminacion de datos en FACTUBOT."
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Sora:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: "#10b981",
+              dark: "#0f172a",
+            },
+            fontFamily: {
+              display: ["Sora", "ui-sans-serif", "system-ui"],
+              body: ["Manrope", "ui-sans-serif", "system-ui"],
+            },
+            backgroundImage: {
+              "hero-radial":
+                "radial-gradient(60% 60% at 50% 0%, rgba(16,185,129,0.35), rgba(15,23,42,0))",
+            },
+            boxShadow: {
+              glow: "0 0 0 1px rgba(16,185,129,0.6), 0 0 40px rgba(16,185,129,0.35)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-dark text-slate-100 antialiased font-body">
+    <!-- Background atmosphere -->
+    <div class="pointer-events-none fixed inset-0 -z-10">
+      <div class="absolute -top-32 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-emerald-500/20 blur-3xl"></div>
+      <div class="absolute top-1/3 right-0 h-80 w-80 rounded-full bg-cyan-500/20 blur-3xl"></div>
+      <div class="absolute inset-0 bg-hero-radial"></div>
+      <svg class="absolute inset-0 h-full w-full opacity-[0.08]" viewBox="0 0 1200 600" aria-hidden="true">
+        <defs>
+          <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+            <path d="M 48 0 L 0 0 0 48" fill="none" stroke="white" stroke-width="1" />
+          </pattern>
+        </defs>
+        <rect width="1200" height="600" fill="url(#grid)" />
+      </svg>
+    </div>
+
+    <main class="min-h-screen px-4 py-16 md:px-6">
+      <section class="mx-auto max-w-3xl text-center">
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-8 md:p-12">
+          <h1 class="mt-4 text-3xl font-semibold md:text-4xl font-display">
+            Solicitud de Eliminacion de Datos de Usuario
+          </h1>
+          <p class="mt-4 text-sm text-white/70">
+            De conformidad con las normas de Facebook sobre la Plataforma de Messenger/WhatsApp, los usuarios tienen derecho a
+            solicitar la eliminacion de sus datos personales.
+          </p>
+
+          <div class="mt-10 space-y-8 text-left text-sm text-white/70">
+            <div class="space-y-3">
+              <h2 class="text-base font-semibold text-white">Solicitud por correo</h2>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                <p class="font-semibold text-white">Envio de solicitud</p>
+                <p class="mt-2">
+                  Enviar un correo electronico a hola@factubot.net con el asunto "Eliminacion de Datos - FactuBot" adjuntando su numero
+                  de RUC.
+                </p>
+              </div>
+            </div>
+
+            <div class="space-y-3">
+              <h2 class="text-base font-semibold text-white">Que datos se eliminan</h2>
+              <p>
+                Se eliminaran de nuestros servidores el archivo .p12, la clave de firma, el historial de facturas emitidas y el
+                numero de telefono asociado.
+              </p>
+            </div>
+
+            <div class="space-y-3">
+              <h2 class="text-base font-semibold text-white">Tiempo de respuesta</h2>
+              <p>
+                La eliminacion se procesara en un maximo de 72 horas laborables.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-10">
+            <a
+              href="index.html"
+              class="inline-flex items-center justify-center rounded-full bg-brand px-8 py-3 text-sm font-semibold text-dark shadow-glow transition hover:-translate-y-0.5"
+            >
+              Volver al Inicio
+            </a>
+          </div>
+        </div>
+
+        <div class="mt-8 text-xs text-white/50">(c) 2026 FACTUBOT. Todos los derechos reservados.</div>
+      </section>
+    </main>
+  </body>
+</html>
