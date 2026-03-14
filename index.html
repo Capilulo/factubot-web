@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FACTUBOT | Facturacion automatica por WhatsApp</title>
+    <title>BOQI | Facturación automática por WhatsApp</title>
     <meta
       name="description"
-      content="FACTUBOT automatiza la facturacion electronica con firma digital, WhatsApp y autorizacion SRI en minutos."
+      content="BOQI automatiza la facturación electrónica con firma digital, WhatsApp y autorización SRI en minutos."
     />
     <link rel="icon" type="image/png" href="logob-04.png" />
     <link rel="apple-touch-icon" href="logob-04.png" />
@@ -26,19 +26,19 @@
         theme: {
           extend: {
             colors: {
-              brand: "#10b981",
-              dark: "#0f172a",
+              brand: "#b9fa3c",
+              dark: "#04045e",
             },
             fontFamily: {
               display: ["Sora", "ui-sans-serif", "system-ui"],
               body: ["Manrope", "ui-sans-serif", "system-ui"],
             },
             boxShadow: {
-              glow: "0 0 0 1px rgba(16,185,129,0.6), 0 0 40px rgba(16,185,129,0.35)",
+              glow: "0 0 0 1px rgba(185,250,60,0.6), 0 0 40px rgba(185,250,60,0.35)",
             },
             backgroundImage: {
               "hero-radial":
-                "radial-gradient(60% 60% at 50% 0%, rgba(16,185,129,0.35), rgba(15,23,42,0))",
+                "radial-gradient(60% 60% at 50% 0%, rgba(185,250,60,0.25), rgba(4,4,94,0))",
             },
           },
         },
@@ -51,8 +51,8 @@
   <body class="bg-dark text-slate-100 antialiased font-body">
     <!-- Background atmosphere -->
     <div class="pointer-events-none fixed inset-0 -z-10">
-      <div class="absolute -top-32 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-emerald-500/20 blur-3xl"></div>
-      <div class="absolute top-1/3 right-0 h-80 w-80 rounded-full bg-cyan-500/20 blur-3xl"></div>
+      <div class="absolute -top-32 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-brand/20 blur-3xl"></div>
+      <div class="absolute top-1/3 right-0 h-80 w-80 rounded-full bg-brand/10 blur-3xl"></div>
       <div class="absolute inset-0 bg-hero-radial"></div>
       <svg
         class="absolute inset-0 h-full w-full opacity-[0.08]"
@@ -71,17 +71,25 @@
     <!-- Navbar -->
     <header class="sticky top-0 z-50 border-b border-white/10 bg-white/5 backdrop-blur-xl">
       <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 md:px-6">
-        <a href="#inicio" class="flex items-center" aria-label="FactuBot">
-          <img src="logob-02.png" alt="FactuBot" class="h-10 w-auto md:h-12" />
+        <a href="#inicio" class="flex items-center" aria-label="Boqi">
+          <img src="LogoBoqi.svg" alt="Boqi" class="h-10 w-auto md:h-12" />
         </a>
 
         <nav class="hidden items-center gap-8 text-sm font-medium md:flex">
           <a class="text-white/80 transition hover:text-white" href="#pasos">Proceso</a>
-          <a class="text-white/80 transition hover:text-white" href="#pricing">Precio</a>
+          <a class="text-white/80 transition hover:text-white" href="#pricing">Planes</a>
           <a class="text-white/80 transition hover:text-white" href="#faq">FAQ</a>
+          <div class="flex items-center gap-3">
+            <a href="#" target="_blank" rel="noopener" class="text-white/40 transition hover:text-white" aria-label="Facebook"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            <a href="#" target="_blank" rel="noopener" class="text-white/40 transition hover:text-white" aria-label="Instagram"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+            <a href="#" target="_blank" rel="noopener" class="text-white/40 transition hover:text-white" aria-label="TikTok"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+            <a href="#" target="_blank" rel="noopener" class="text-white/40 transition hover:text-white" aria-label="YouTube"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          </div>
           <a
             class="rounded-full bg-brand px-5 py-2 text-sm font-semibold text-dark shadow-glow transition hover:-translate-y-0.5"
-            href="#pricing"
+            href="https://wa.me/593992907513?text=Hola%2C%20quiero%20comenzar%20a%20facturar%20por%20WhatsApp"
+            target="_blank"
+            rel="noopener"
           >
             Empezar ahora
           </a>
@@ -92,7 +100,7 @@
           class="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 p-2 text-white md:hidden"
           aria-expanded="false"
           aria-controls="mobile-menu"
-          aria-label="Abrir menu"
+          aria-label="Abrir menú"
         >
           <i id="icon-open" data-lucide="menu" class="h-5 w-5"></i>
           <i id="icon-close" data-lucide="x" class="hidden h-5 w-5"></i>
@@ -103,49 +111,59 @@
       <div id="mobile-menu" class="hidden border-t border-white/10 bg-dark/80 md:hidden">
         <div class="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-4 text-sm">
           <a class="text-white/80 transition hover:text-white" href="#pasos">Proceso</a>
-          <a class="text-white/80 transition hover:text-white" href="#pricing">Precio</a>
+          <a class="text-white/80 transition hover:text-white" href="#pricing">Planes</a>
           <a class="text-white/80 transition hover:text-white" href="#faq">FAQ</a>
           <a
             class="rounded-full bg-brand px-5 py-2 text-center font-semibold text-dark shadow-glow"
-            href="#pricing"
+            href="https://wa.me/593992907513?text=Hola%2C%20quiero%20comenzar%20a%20facturar%20por%20WhatsApp"
+            target="_blank"
+            rel="noopener"
           >
             Empezar ahora
           </a>
+          <div class="flex items-center justify-center gap-4 pt-2">
+            <a href="#" target="_blank" rel="noopener" class="text-white/40 transition hover:text-white" aria-label="Facebook"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            <a href="#" target="_blank" rel="noopener" class="text-white/40 transition hover:text-white" aria-label="Instagram"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+            <a href="#" target="_blank" rel="noopener" class="text-white/40 transition hover:text-white" aria-label="TikTok"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+            <a href="#" target="_blank" rel="noopener" class="text-white/40 transition hover:text-white" aria-label="YouTube"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          </div>
         </div>
       </div>
     </header>
 
     <main>
       <!-- Hero -->
-      <section id="inicio" class="px-4 pb-20 pt-16 md:px-6">
+      <section id="inicio" class="px-4 pb-12 pt-10 md:px-6">
         <div class="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2">
           <div>
             <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.2em] text-white/70">
               <span class="h-2 w-2 rounded-full bg-brand"></span>
-              Facturacion sin friccion
+              Facturación sin fricción
             </div>
             <h1 class="mt-6 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl font-display">
-              Automatiza tu facturacion con
+              Factura sin salir de WhatsApp con
               <span class="inline-flex items-center">
-                <img src="logob-02.png" alt="FactuBot" class="h-10 w-auto md:h-12 lg:h-14" />
+                <img src="LogoBoqi.svg" alt="Boqi" class="h-10 w-auto md:h-12 lg:h-14" />
               </span>
             </h1>
             <p class="mt-6 max-w-xl text-base text-white/70 md:text-lg">
-              Conecta tu firma digital, recibe pedidos por WhatsApp y envia facturas autorizadas por el SRI en minutos. Todo desde un panel claro y seguro.
+              Envía un Hola al +593 99 290 7513 y comienza a facturar en minutos. Completa el registro, sube tu firma electrónica y emite facturas autorizadas por el SRI directamente desde WhatsApp, sin apps adicionales ni complicaciones. Las tres primeras facturas van por nuestra cuenta, úsalas para ver lo fácil que es.
             </p>
 
             <div class="mt-8 flex flex-col gap-4 sm:flex-row">
               <a
-                href="#pricing"
+                href="https://wa.me/593992907513?text=Hola%2C%20quiero%20comenzar%20a%20facturar%20por%20WhatsApp"
+                target="_blank"
+                rel="noopener"
                 class="rounded-full bg-brand px-8 py-3 text-center text-sm font-semibold text-dark shadow-glow transition hover:-translate-y-0.5"
               >
-                Probar FACTUBOT
+                Probar Boqi
               </a>
               <a
                 href="#pasos"
                 class="rounded-full border border-white/20 px-8 py-3 text-center text-sm font-semibold text-white/90 transition hover:border-white/40"
               >
-                Ver como funciona
+                Ver cómo funciona
               </a>
             </div>
 
@@ -155,7 +173,7 @@
                 <p class="mt-2 text-2xl font-semibold">&lt; 3 min</p>
               </div>
               <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
-                <p class="text-sm text-white/70">Integracion SRI</p>
+                <p class="text-sm text-white/70">Integración SRI</p>
                 <p class="mt-2 text-2xl font-semibold">100% automatizada</p>
               </div>
             </div>
@@ -164,20 +182,20 @@
           <!-- Floating chat panel -->
           <div class="relative">
             <div class="absolute -inset-8 rounded-[32px] bg-white/5 blur-2xl"></div>
-            <div class="relative rounded-[28px] border border-white/10 bg-slate-900/80 p-6 shadow-xl">
+            <div class="relative rounded-[28px] border border-white/10 bg-dark/80 p-6 shadow-xl">
               <div class="flex items-center justify-between">
                 <div>
-                  <p class="text-sm font-semibold">FACTUBOT</p>
+                  <p class="text-sm font-semibold">BOQI</p>
                   <p class="text-xs text-white/60">WhatsApp Flow</p>
                 </div>
-                <span class="rounded-full bg-emerald-500/20 px-3 py-1 text-xs text-emerald-300">En linea</span>
+                <span class="rounded-full bg-brand/20 px-3 py-1 text-xs text-brand">En línea</span>
               </div>
 
               <div class="mt-6 space-y-4">
                 <div class="w-fit max-w-[80%] rounded-2xl rounded-bl-sm bg-white/10 px-4 py-3 text-sm text-white/80">
                   Hola! Cual es el RUC y monto de la factura?
                 </div>
-                <div class="ml-auto w-fit max-w-[80%] rounded-2xl rounded-br-sm bg-emerald-500/20 px-4 py-3 text-sm text-emerald-100">
+                <div class="ml-auto w-fit max-w-[80%] rounded-2xl rounded-br-sm bg-brand/20 px-4 py-3 text-sm text-brand/80">
                   RUC 1790000000, total 125.50
                 </div>
                 <div class="w-fit max-w-[80%] rounded-2xl rounded-bl-sm bg-white/10 px-4 py-3 text-sm text-white/80">
@@ -201,104 +219,424 @@
         </div>
       </section>
 
-      <!-- Steps -->
-      <section id="pasos" class="px-4 py-20 md:px-6">
+      <!-- Steps + Videos -->
+      <section id="pasos" class="px-4 py-12 md:px-6">
         <div class="mx-auto max-w-6xl">
           <div class="max-w-2xl">
             <p class="text-sm uppercase tracking-[0.2em] text-white/60">Proceso en 3 pasos</p>
-            <h2 class="mt-4 text-3xl font-semibold md:text-4xl font-display">Configura FACTUBOT en minutos</h2>
+            <h2 class="mt-4 text-3xl font-semibold md:text-4xl font-display">Configura Boqi en minutos</h2>
             <p class="mt-4 text-white/70">
-              Un flujo simple para que tu equipo facture sin errores y con visibilidad total.
+              Solo necesitas tu firma electrónica y tu RUC.
             </p>
           </div>
 
-          <div class="mt-12 grid gap-6 md:grid-cols-3">
-            <article class="group rounded-3xl border border-white/10 bg-white/5 p-6 transition-transform duration-300 hover:scale-105">
-              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-500/20">
-                <i data-lucide="key-round" class="h-6 w-6 text-emerald-300"></i>
-              </div>
-              <h3 class="mt-6 text-xl font-semibold">1. Firma .p12</h3>
-              <p class="mt-3 text-sm text-white/70">
-                Carga tu certificado y deja la firma digital protegida dentro de FACTUBOT.
-              </p>
-            </article>
+          <!-- Bloque 1: Onboarding (Pasos 1-2 + Video) -->
+          <div class="mt-12 grid gap-8 md:grid-cols-2 items-center">
+            <div class="space-y-6">
+              <article class="group rounded-3xl border border-white/10 bg-white/5 p-6 transition-transform duration-300 hover:scale-[1.02]">
+                <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand/20">
+                  <i data-lucide="file-text" class="h-6 w-6 text-brand"></i>
+                </div>
+                <h3 class="mt-6 text-xl font-semibold">1. Tus documentos</h3>
+                <p class="mt-3 text-sm text-white/70">
+                  Ten tus documentos a la mano: solo necesitas tu RUC y el archivo .p12 en tu teléfono.
+                  <a href="https://wa.me/593992907513?text=Hola%2C%20necesito%20ayuda%20con%20mi%20firma%20electrónica" target="_blank" rel="noopener" class="text-brand underline underline-offset-2 transition hover:text-brand/80">Contáctanos si necesitas tu firma electrónica.</a>
+                </p>
+              </article>
 
-            <article class="group rounded-3xl border border-white/10 bg-white/5 p-6 transition-transform duration-300 hover:scale-105">
-              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-500/20">
-                <i data-lucide="message-circle" class="h-6 w-6 text-cyan-300"></i>
-              </div>
-              <h3 class="mt-6 text-xl font-semibold">2. WhatsApp</h3>
-              <p class="mt-3 text-sm text-white/70">
-                Recibe pedidos y datos de facturacion desde un canal seguro y automatizado.
-              </p>
-            </article>
+              <article class="group rounded-3xl border border-white/10 bg-white/5 p-6 transition-transform duration-300 hover:scale-[1.02]">
+                <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand/20">
+                  <i data-lucide="message-circle" class="h-6 w-6 text-brand"></i>
+                </div>
+                <h3 class="mt-6 text-xl font-semibold">2. Escribe Hola</h3>
+                <p class="mt-3 text-sm text-white/70">
+                  Escribe Hola al <strong class="text-white">+593 99 290 7513</strong>, sigue el proceso confirmando tus datos y sube tu firma. Puedes borrar la firma y la contraseña del chat luego de enviarlo.
+                </p>
+              </article>
+            </div>
 
-            <article class="group rounded-3xl border border-white/10 bg-white/5 p-6 transition-transform duration-300 hover:scale-105">
-              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-500/20">
-                <i data-lucide="badge-check" class="h-6 w-6 text-emerald-300"></i>
+            <div class="relative aspect-video rounded-3xl border border-white/10 bg-white/5 overflow-hidden flex items-center justify-center">
+              <div class="absolute inset-0 bg-gradient-to-br from-brand/5 to-transparent"></div>
+              <div class="relative flex flex-col items-center gap-4 text-white/50">
+                <i data-lucide="play-circle" class="h-16 w-16"></i>
+                <p class="text-sm font-medium">Proceso de onboarding</p>
               </div>
-              <h3 class="mt-6 text-xl font-semibold">3. Autorizacion SRI</h3>
-              <p class="mt-3 text-sm text-white/70">
-                Envios instantaneos con respuesta en tiempo real y control de estado.
-              </p>
-            </article>
+            </div>
+          </div>
+
+          <!-- Bloque 2: Facturación (Video + Paso 3) -->
+          <div class="mt-12 grid gap-8 md:grid-cols-2 items-center">
+            <div class="relative aspect-video rounded-3xl border border-white/10 bg-white/5 overflow-hidden flex items-center justify-center md:order-1">
+              <div class="absolute inset-0 bg-gradient-to-br from-brand/5 to-transparent"></div>
+              <div class="relative flex flex-col items-center gap-4 text-white/50">
+                <i data-lucide="play-circle" class="h-16 w-16"></i>
+                <p class="text-sm font-medium">Cómo facturar con Boqi</p>
+              </div>
+            </div>
+
+            <div class="md:order-2">
+              <article class="group rounded-3xl border border-white/10 bg-white/5 p-6 transition-transform duration-300 hover:scale-[1.02]">
+                <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand/20">
+                  <i data-lucide="zap" class="h-6 w-6 text-brand"></i>
+                </div>
+                <h3 class="mt-6 text-xl font-semibold">3. Factura al instante</h3>
+                <p class="mt-3 text-sm text-white/70">
+                  Listo. Dile a Boqi lo que quieres facturar, para quién, y factura sin tanto lío.
+                </p>
+              </article>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- Pricing -->
-      <section id="pricing" class="px-4 pb-24 md:px-6">
-        <div class="mx-auto max-w-5xl text-center">
-          <p class="text-sm uppercase tracking-[0.2em] text-white/60">Plan Pro</p>
-          <h2 class="mt-4 text-3xl font-semibold md:text-4xl font-display">Listo para escalar tu facturacion?</h2>
-          <p class="mt-4 text-white/70">
-            Todo lo que necesitas para operar con seguridad y velocidad.
-          </p>
-
-          <div class="mt-10 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/70">
-            <span class="h-2 w-2 rounded-full bg-brand"></span>
-            500+ negocios facturan con FACTUBOT cada mes
+      <section id="pricing" class="px-4 py-14 md:px-6">
+        <div class="mx-auto max-w-7xl">
+          <div class="text-center">
+            <p class="text-sm uppercase tracking-[0.2em] text-white/60">Planes y Precios</p>
+            <h2 class="mt-4 text-3xl font-semibold md:text-4xl font-display">El plan perfecto para cada negocio</h2>
+            <p class="mt-4 max-w-2xl mx-auto text-white/70">
+              Desde emprendedores hasta corporaciones. Elige el plan que crece contigo y factura sin límites.
+            </p>
           </div>
 
-          <div class="mt-10 rounded-3xl border border-emerald-400/40 bg-slate-900/80 p-8 text-left shadow-glow">
-            <div class="flex flex-col items-start justify-between gap-6 md:flex-row">
-              <div>
-                <h3 class="text-2xl font-semibold">FACTUBOT Pro</h3>
-                <p class="mt-2 text-sm text-white/70">
-                  Facturacion automatica, soporte prioritario y analytics en tiempo real.
-                </p>
-                <ul class="mt-6 space-y-3 text-sm text-white/70">
-                  <li class="flex items-center gap-3">
-                    <i data-lucide="check-circle-2" class="h-5 w-5 text-emerald-300"></i>
-                    Certificados .p12 ilimitados
-                  </li>
-                  <li class="flex items-center gap-3">
-                    <i data-lucide="check-circle-2" class="h-5 w-5 text-emerald-300"></i>
-                    WhatsApp Flow + integracion ERP
-                  </li>
-                  <li class="flex items-center gap-3">
-                    <i data-lucide="check-circle-2" class="h-5 w-5 text-emerald-300"></i>
-                    Monitoreo de autorizacion SRI
-                  </li>
-                </ul>
-              </div>
-              <div class="w-full max-w-xs rounded-2xl border border-white/10 bg-white/5 p-6">
-                <p class="text-sm text-white/60">Desde</p>
-                <p class="mt-2 text-4xl font-semibold">$49</p>
-                <p class="text-sm text-white/60">/ mes</p>
-                <div class="mt-6">
-                  <div id="pp-button" class="w-full"></div>
-                  <!-- `` -->
+          <!-- Toggle mensual / anual -->
+          <div class="mt-10 flex items-center justify-center gap-3">
+            <div class="inline-flex rounded-full border border-white/10 bg-white/5 p-1">
+              <button id="btn-monthly" onclick="setBilling('monthly')" class="rounded-full px-6 py-2.5 text-sm font-semibold bg-brand text-dark transition">Mensual</button>
+              <button id="btn-annual" onclick="setBilling('annual')" class="rounded-full px-6 py-2.5 text-sm font-semibold text-white/70 transition hover:text-white">Anual</button>
+            </div>
+            <span class="rounded-full bg-brand/20 px-3 py-1.5 text-xs font-bold text-brand">Ahorra 2 meses</span>
+          </div>
+
+          <!-- Plan cards -->
+          <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+
+            <!-- Plan 1: Básico / Emprendedor -->
+            <div class="group relative flex flex-col rounded-3xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:scale-[1.02] hover:border-white/20">
+              <div class="flex items-center gap-3">
+                <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500/20">
+                  <i data-lucide="user" class="h-5 w-5 text-emerald-400"></i>
                 </div>
-                <p class="mt-4 text-xs text-white/60">Cancelacion flexible. Sin costos ocultos.</p>
+                <div>
+                  <h3 class="text-lg font-semibold">Básico</h3>
+                  <p class="text-xs text-white/50">Emprendedor</p>
+                </div>
+              </div>
+              <p class="mt-4 text-sm text-white/60">Ideal para freelancers, profesionales independientes y servicios ocasionales.</p>
+
+              <div class="mt-6 mb-6">
+                <div class="price-monthly">
+                  <span class="text-4xl font-bold font-display">$6.99</span>
+                  <span class="text-sm text-white/50"> / mes</span>
+                </div>
+                <div class="price-annual hidden">
+                  <span class="text-4xl font-bold font-display">$69.90</span>
+                  <span class="text-sm text-white/50"> / año</span>
+                  <p class="mt-1.5 text-xs font-semibold text-brand">Ahorras $13.98</p>
+                </div>
+              </div>
+
+              <ul class="mb-8 space-y-3 text-sm text-white/70 flex-1">
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-brand"></i>
+                  1 número de WhatsApp conectado
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-brand"></i>
+                  Hasta 50 facturas / mes
+                </li>
+              </ul>
+
+              <a href="https://wa.me/593992907513?text=Hola%2C%20quiero%20el%20plan%20Básico" target="_blank" rel="noopener" class="mt-auto block rounded-full border border-white/20 py-3 text-center text-sm font-semibold text-white/90 transition hover:border-white/40 hover:bg-white/5">
+                Empezar ahora
+              </a>
+            </div>
+
+            <!-- Plan 2: Estándar / Pyme -->
+            <div class="group relative flex flex-col rounded-3xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:scale-[1.02] hover:border-white/20">
+              <div class="flex items-center gap-3">
+                <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-500/20">
+                  <i data-lucide="users" class="h-5 w-5 text-blue-400"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold">Estándar</h3>
+                  <p class="text-xs text-white/50">Pyme</p>
+                </div>
+              </div>
+              <p class="mt-4 text-sm text-white/60">Para tiendas, restaurantes, ferreterías y consultorios con flujo diario.</p>
+
+              <div class="mt-6 mb-6">
+                <div class="price-monthly">
+                  <span class="text-4xl font-bold font-display">$12.99</span>
+                  <span class="text-sm text-white/50"> / mes</span>
+                </div>
+                <div class="price-annual hidden">
+                  <span class="text-4xl font-bold font-display">$129.90</span>
+                  <span class="text-sm text-white/50"> / año</span>
+                  <p class="mt-1.5 text-xs font-semibold text-brand">Ahorras $25.98</p>
+                </div>
+              </div>
+
+              <ul class="mb-8 space-y-3 text-sm text-white/70 flex-1">
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-brand"></i>
+                  Hasta 5 usuarios en el mismo RUC
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-brand"></i>
+                  Hasta 300 facturas / mes
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-brand"></i>
+                  ~10 facturas diarias
+                </li>
+              </ul>
+
+              <a href="https://wa.me/593992907513?text=Hola%2C%20quiero%20el%20plan%20Estándar" target="_blank" rel="noopener" class="mt-auto block rounded-full border border-white/20 py-3 text-center text-sm font-semibold text-white/90 transition hover:border-white/40 hover:bg-white/5">
+                Empezar ahora
+              </a>
+            </div>
+
+            <!-- Plan 3: Intensivo / Pro (Recomendado) -->
+            <div class="group relative flex flex-col rounded-3xl border-2 border-brand/40 bg-white/5 p-6 shadow-glow transition-all duration-300 hover:scale-[1.02]">
+              <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-brand px-4 py-1 text-xs font-bold text-dark uppercase tracking-wider">Recomendado</div>
+
+              <div class="flex items-center gap-3 mt-2">
+                <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-purple-500/20">
+                  <i data-lucide="zap" class="h-5 w-5 text-purple-400"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold">Intensivo</h3>
+                  <p class="text-xs text-white/50">Pro</p>
+                </div>
+              </div>
+              <p class="mt-4 text-sm text-white/60">Minimarkets, farmacias y comercios de alta rotación que necesitan volumen.</p>
+
+              <div class="mt-6 mb-6">
+                <div class="price-monthly">
+                  <span class="text-4xl font-bold font-display">$24.99</span>
+                  <span class="text-sm text-white/50"> / mes</span>
+                </div>
+                <div class="price-annual hidden">
+                  <span class="text-4xl font-bold font-display">$249.90</span>
+                  <span class="text-sm text-white/50"> / año</span>
+                  <p class="mt-1.5 text-xs font-semibold text-brand">Ahorras $49.98</p>
+                </div>
+              </div>
+
+              <ul class="mb-8 space-y-3 text-sm text-white/70 flex-1">
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-brand"></i>
+                  Hasta 10 usuarios en el mismo RUC
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-brand"></i>
+                  Hasta 1,000 facturas / mes
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-brand"></i>
+                  ~33 facturas diarias
+                </li>
+              </ul>
+
+              <a href="https://wa.me/593992907513?text=Hola%2C%20quiero%20el%20plan%20Intensivo%20Pro" target="_blank" rel="noopener" class="mt-auto block rounded-full bg-brand py-3 text-center text-sm font-semibold text-dark shadow-glow transition hover:-translate-y-0.5">
+                Empezar ahora
+              </a>
+            </div>
+
+            <!-- Plan 4: Corporativo / Personalizado -->
+            <div class="group relative flex flex-col rounded-3xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:scale-[1.02] hover:border-white/20">
+              <div class="flex items-center gap-3">
+                <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-500/20">
+                  <i data-lucide="building-2" class="h-5 w-5 text-amber-400"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold">Corporativo</h3>
+                  <p class="text-xs text-white/50">Personalizado</p>
+                </div>
+              </div>
+              <p class="mt-4 text-sm text-white/60">Agencias, contadores o empresas con altísimo volumen y múltiples RUCs.</p>
+
+              <div class="mt-6 mb-6">
+                <span class="text-2xl font-bold font-display">A tu medida</span>
+                <p class="mt-1 text-sm text-white/50">Contáctanos para un plan personalizado</p>
+              </div>
+
+              <ul class="mb-8 space-y-3 text-sm text-white/70 flex-1">
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-brand"></i>
+                  +1,000 facturas / mes
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-brand"></i>
+                  Múltiples RUCs en un número
+                </li>
+              </ul>
+
+              <a href="https://wa.me/593992907513?text=Hola%2C%20quiero%20conocer%20el%20plan%20Corporativo" target="_blank" rel="noopener" class="mt-auto block rounded-full border border-white/20 py-3 text-center text-sm font-semibold text-white/90 transition hover:border-white/40 hover:bg-white/5">
+                Contactar ventas
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Social proof -->
+          <div class="mt-12 text-center">
+            <div class="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm text-white/70">
+              <span class="h-2 w-2 rounded-full bg-brand animate-pulse"></span>
+              500+ negocios ya facturan con BOQI cada mes
+            </div>
+            <p class="mt-4 text-xs text-white/50">Cancelación flexible. Sin costos ocultos. Sin permanencia.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Integración Contable -->
+      <section id="integración" class="px-4 py-14 md:px-6 overflow-hidden">
+        <div class="mx-auto max-w-6xl">
+          <div class="grid gap-12 items-center md:grid-cols-2">
+            <div>
+              <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.2em] text-white/70">
+                <span class="h-2 w-2 rounded-full bg-brand"></span>
+                Integración nativa
+              </div>
+              <h2 class="mt-6 text-3xl font-semibold md:text-4xl font-display leading-tight">
+                Tu sistema contable + BOQI = facturación sin esfuerzo
+              </h2>
+              <p class="mt-6 text-white/70 text-base md:text-lg leading-relaxed">
+                Ya tienes un sistema contable que funciona? No lo cambies. Conecta BOQI y envía facturas autorizadas desde WhatsApp mientras mantienes todo el control que ya tienes. Sin migraciones, sin curva de aprendizaje, sin complicaciones.
+              </p>
+              <ul class="mt-8 space-y-5">
+                <li class="flex items-start gap-3 text-sm text-white/70">
+                  <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-brand/20">
+                    <i data-lucide="plug" class="h-4 w-4 text-brand"></i>
+                  </div>
+                  <div>
+                    <p class="font-semibold text-white">Conexión directa vía API</p>
+                    <p class="mt-0.5">Webhooks y endpoints listos para conectar con tu ERP o software contable favorito.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3 text-sm text-white/70">
+                  <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-brand/20">
+                    <i data-lucide="shield-check" class="h-4 w-4 text-brand"></i>
+                  </div>
+                  <div>
+                    <p class="font-semibold text-white">Tu mantienes el control</p>
+                    <p class="mt-0.5">Tus datos siguen en tu sistema. BOQI solo facilita la emisión y envío de facturas.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3 text-sm text-white/70">
+                  <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-brand/20">
+                    <i data-lucide="refresh-cw" class="h-4 w-4 text-brand"></i>
+                  </div>
+                  <div>
+                    <p class="font-semibold text-white">Sincronización en tiempo real</p>
+                    <p class="mt-0.5">Cada factura emitida se refleja automáticamente en tu sistema contable.</p>
+                  </div>
+                </li>
+              </ul>
+              <a href="https://wa.me/593963450243?text=Hola%2C%20quiero%20conectar%20boqi%20a%20mi%20software." target="_blank" rel="noopener" class="mt-8 inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 text-sm font-semibold text-dark shadow-glow transition hover:-translate-y-0.5">
+                Consultar ahora
+                <i data-lucide="arrow-right" class="h-4 w-4"></i>
+              </a>
+            </div>
+
+            <!-- Flow diagram -->
+            <div class="relative">
+              <div class="absolute -inset-8 rounded-[32px] bg-brand/5 blur-2xl"></div>
+              <div class="relative rounded-3xl border border-white/10 bg-dark/60 p-8">
+                <div class="flex flex-col items-center gap-5">
+                  <div class="w-full rounded-2xl border-2 border-brand/40 bg-brand/10 p-5 text-center shadow-glow">
+                    <img src="LogoBoqi.svg" alt="BOQI" class="mx-auto h-8 w-auto" />
+                    <p class="mt-2 text-xs text-white/70">Emite, autoriza y envía por WhatsApp</p>
+                  </div>
+
+                  <div class="flex flex-col items-center text-brand/60">
+                    <div class="h-6 w-px bg-gradient-to-b from-white/10 to-brand/40"></div>
+                    <i data-lucide="chevrons-down" class="h-5 w-5 animate-bounce text-brand"></i>
+                    <div class="h-6 w-px bg-gradient-to-b from-brand/40 to-white/10"></div>
+                  </div>
+
+                  <div class="grid w-full grid-cols-3 gap-4">
+                    <div class="rounded-2xl border border-white/10 bg-white/5 p-4 text-center">
+                      <i data-lucide="file-check" class="mx-auto h-6 w-6 text-brand/70"></i>
+                      <p class="mt-2 text-xs font-semibold">SRI Autorizado</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-white/5 p-4 text-center">
+                      <i data-lucide="send" class="mx-auto h-6 w-6 text-brand/70"></i>
+                      <p class="mt-2 text-xs font-semibold">Cliente recibe</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-white/5 p-4 text-center">
+                      <i data-lucide="monitor" class="mx-auto h-6 w-6 text-brand/70"></i>
+                      <p class="mt-2 text-xs font-semibold">Tu Sistema</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- Próximamente -->
+      <section id="proximamente" class="px-4 py-14 md:px-6">
+        <div class="mx-auto max-w-6xl">
+          <div class="text-center">
+            <div class="inline-flex items-center gap-2 rounded-full border border-brand/30 bg-brand/10 px-4 py-2 text-xs uppercase tracking-[0.2em] text-brand">
+              <i data-lucide="rocket" class="h-3.5 w-3.5"></i>
+              Próximamente
+            </div>
+            <h2 class="mt-6 text-3xl font-semibold md:text-4xl font-display">Esto apenas comienza</h2>
+            <p class="mt-4 max-w-2xl mx-auto text-white/70">
+              Estamos construyendo un ecosistema completo para que tu negocio funcione en piloto automático. Estas son las herramientas que vienen.
+            </p>
+          </div>
+
+          <div class="mt-12 grid gap-6 md:grid-cols-3">
+
+            <!-- Inventario -->
+            <div class="group relative rounded-3xl border border-white/10 bg-white/5 p-8 transition-all duration-300 hover:border-brand/30 hover:bg-white/[0.07]">
+              <div class="absolute top-4 right-4 rounded-full bg-brand/20 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-brand">Pronto</div>
+              <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-brand/20 to-brand/5">
+                <i data-lucide="package" class="h-7 w-7 text-brand"></i>
+              </div>
+              <h3 class="mt-6 text-xl font-semibold font-display">Control de Inventario Inteligente</h3>
+              <p class="mt-3 text-sm text-white/60 leading-relaxed">
+                Gestiona tu stock desde Boqi. Recibe alertas cuando un producto está por agotarse, registra entradas y salidas al instante, y toma decisiones con datos reales. Tu inventario, siempre bajo control.
+              </p>
+            </div>
+
+            <!-- Bot SRI -->
+            <div class="group relative rounded-3xl border border-white/10 bg-white/5 p-8 transition-all duration-300 hover:border-brand/30 hover:bg-white/[0.07]">
+              <div class="absolute top-4 right-4 rounded-full bg-brand/20 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-brand">Pronto</div>
+              <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-brand/20 to-brand/5">
+                <i data-lucide="bot" class="h-7 w-7 text-brand"></i>
+              </div>
+              <h3 class="mt-6 text-xl font-semibold font-display">Asistente SRI con IA</h3>
+              <p class="mt-3 text-sm text-white/60 leading-relaxed">
+                ¿Dudas tributarias? Pregúntale a nuestro bot, siempre actualizado con la última normativa del SRI. Resoluciones, plazos, requisitos: toda la información que necesitas, explicada de forma clara y al instante.
+              </p>
+            </div>
+
+            <!-- Contabilidad IA -->
+            <div class="group relative rounded-3xl border border-white/10 bg-white/5 p-8 transition-all duration-300 hover:border-brand/30 hover:bg-white/[0.07]">
+              <div class="absolute top-4 right-4 rounded-full bg-brand/20 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-brand">Pronto</div>
+              <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-brand/20 to-brand/5">
+                <i data-lucide="sparkles" class="h-7 w-7 text-brand"></i>
+              </div>
+              <h3 class="mt-6 text-xl font-semibold font-display">Contabilidad con IA</h3>
+              <p class="mt-3 text-sm text-white/60 leading-relaxed">
+                La inteligencia artificial clasifica, organiza y prepara tus documentos contables. Tú solo revisas, aceptas y envías al SRI. Menos errores, menos tiempo, más tranquilidad para enfocarte en lo que importa: tu negocio.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       <!-- FAQ -->
-      <section id="faq" class="px-4 pb-20 md:px-6">
+      <section id="faq" class="px-4 pb-12 md:px-6">
         <div class="mx-auto max-w-4xl">
           <div class="text-center">
             <p class="text-sm uppercase tracking-[0.2em] text-white/60">FAQ</p>
@@ -308,31 +646,101 @@
           <div class="mt-10 space-y-4">
             <details class="group rounded-2xl border border-white/10 bg-white/5 p-6">
               <summary class="flex cursor-pointer list-none items-center justify-between text-base font-semibold">
-                Cuanto tarda la integracion?
+                ¿Es seguro enviar mi firma electrónica (.p12) por WhatsApp?
                 <i data-lucide="chevron-down" class="h-5 w-5 transition group-open:rotate-180"></i>
               </summary>
               <p class="mt-4 text-sm text-white/70">
-                El onboarding promedio toma menos de 24 horas con soporte guiado y validacion SRI.
+                Tu archivo .p12 se transmite con el cifrado de extremo a extremo de WhatsApp. Una vez que lo recibimos, se almacena de forma encriptada en servidores seguros. Además, puedes eliminar el mensaje del chat inmediatamente después de enviarlo.
               </p>
             </details>
 
             <details class="group rounded-2xl border border-white/10 bg-white/5 p-6">
               <summary class="flex cursor-pointer list-none items-center justify-between text-base font-semibold">
-                Es compatible con cualquier ERP?
+                ¿Quién tiene acceso a mi firma electrónica y contraseña?
                 <i data-lucide="chevron-down" class="h-5 w-5 transition group-open:rotate-180"></i>
               </summary>
               <p class="mt-4 text-sm text-white/70">
-                Si. FACTUBOT conecta via API y webhooks con los ERP mas usados o con integraciones a medida.
+                Nadie. Tu firma y contraseña se procesan de forma automatizada. Ningún ser humano del equipo de BOQI tiene acceso a tu archivo .p12 ni a tu clave. El sistema las utiliza únicamente para firmar las facturas que tú solicitas.
               </p>
             </details>
 
             <details class="group rounded-2xl border border-white/10 bg-white/5 p-6">
               <summary class="flex cursor-pointer list-none items-center justify-between text-base font-semibold">
-                Que soporte incluye el plan Pro?
+                ¿Pueden emitir facturas a mi nombre sin mi autorización?
                 <i data-lucide="chevron-down" class="h-5 w-5 transition group-open:rotate-180"></i>
               </summary>
               <p class="mt-4 text-sm text-white/70">
-                Incluye soporte prioritario, monitoreo de envios y reportes semanales de rendimiento.
+                No. BOQI solo emite una factura cuando tú lo solicitas explícitamente a través de WhatsApp. No se genera ningún documento sin tu instrucción directa. Tú tienes el control total.
+              </p>
+            </details>
+
+            <details class="group rounded-2xl border border-white/10 bg-white/5 p-6">
+              <summary class="flex cursor-pointer list-none items-center justify-between text-base font-semibold">
+                ¿Dónde se almacenan mis datos y documentos?
+                <i data-lucide="chevron-down" class="h-5 w-5 transition group-open:rotate-180"></i>
+              </summary>
+              <p class="mt-4 text-sm text-white/70">
+                Tus datos se almacenan en servidores con cifrado en reposo y en tránsito, protegidos con las mejores prácticas de seguridad de la industria. Cumplimos con la normativa ecuatoriana de protección de datos.
+              </p>
+            </details>
+
+            <details class="group rounded-2xl border border-white/10 bg-white/5 p-6">
+              <summary class="flex cursor-pointer list-none items-center justify-between text-base font-semibold">
+                ¿Qué pasa con mis datos si cancelo el servicio?
+                <i data-lucide="chevron-down" class="h-5 w-5 transition group-open:rotate-180"></i>
+              </summary>
+              <p class="mt-4 text-sm text-white/70">
+                Puedes solicitar la eliminación completa de tu firma electrónica y datos personales en cualquier momento. Al cancelar, eliminamos tu archivo .p12 y toda la información asociada de nuestros servidores.
+              </p>
+            </details>
+
+            <details class="group rounded-2xl border border-white/10 bg-white/5 p-6">
+              <summary class="flex cursor-pointer list-none items-center justify-between text-base font-semibold">
+                ¿Las facturas emitidas con BOQI son legalmente válidas ante el SRI?
+                <i data-lucide="chevron-down" class="h-5 w-5 transition group-open:rotate-180"></i>
+              </summary>
+              <p class="mt-4 text-sm text-white/70">
+                Sí. Cada factura se firma digitalmente con tu certificado .p12, se envía al SRI para su autorización y recibe un número de autorización oficial. El proceso es idéntico al de cualquier sistema de facturación electrónica autorizado.
+              </p>
+            </details>
+
+            <details class="group rounded-2xl border border-white/10 bg-white/5 p-6">
+              <summary class="flex cursor-pointer list-none items-center justify-between text-base font-semibold">
+                ¿Qué necesito para empezar a facturar con BOQI?
+                <i data-lucide="chevron-down" class="h-5 w-5 transition group-open:rotate-180"></i>
+              </summary>
+              <p class="mt-4 text-sm text-white/70">
+                Solo tres cosas: tu número de RUC, tu archivo de firma electrónica (.p12) y su contraseña. Envía un "Hola" a nuestro WhatsApp y el proceso de registro toma menos de 5 minutos.
+              </p>
+            </details>
+
+            <details class="group rounded-2xl border border-white/10 bg-white/5 p-6">
+              <summary class="flex cursor-pointer list-none items-center justify-between text-base font-semibold">
+                ¿Puedo cambiar de plan o cancelar en cualquier momento?
+                <i data-lucide="chevron-down" class="h-5 w-5 transition group-open:rotate-180"></i>
+              </summary>
+              <p class="mt-4 text-sm text-white/70">
+                Sí. No hay permanencia ni contratos a largo plazo. Puedes subir o bajar de plan cuando quieras, y cancelar en cualquier momento sin costos adicionales ni penalizaciones.
+              </p>
+            </details>
+
+            <details class="group rounded-2xl border border-white/10 bg-white/5 p-6">
+              <summary class="flex cursor-pointer list-none items-center justify-between text-base font-semibold">
+                ¿Qué pasa si supero el límite de facturas de mi plan?
+                <i data-lucide="chevron-down" class="h-5 w-5 transition group-open:rotate-180"></i>
+              </summary>
+              <p class="mt-4 text-sm text-white/70">
+                Te notificaremos cuando estés cerca de tu límite mensual. Si lo alcanzas, puedes subir de plan al instante para seguir facturando sin interrupciones.
+              </p>
+            </details>
+
+            <details class="group rounded-2xl border border-white/10 bg-white/5 p-6">
+              <summary class="flex cursor-pointer list-none items-center justify-between text-base font-semibold">
+                ¿Cómo obtengo ayuda si tengo un problema?
+                <i data-lucide="chevron-down" class="h-5 w-5 transition group-open:rotate-180"></i>
+              </summary>
+              <p class="mt-4 text-sm text-white/70">
+                Nuestro equipo de soporte está disponible por WhatsApp. Escríbenos al <a href="https://wa.me/593963450243?text=Hola%2C%20tengo%20un%20problema%20usando%20boqi%2C%20necesito%20ayuda%20por%20favor." target="_blank" rel="noopener" class="text-brand underline underline-offset-2 font-semibold hover:text-brand/80 transition">+593 96 345 0243</a> y te ayudamos en tiempo real.
               </p>
             </details>
           </div>
@@ -344,23 +752,29 @@
     <footer class="border-t border-white/10 px-4 py-12 md:px-6">
       <div class="mx-auto grid max-w-6xl gap-8 md:grid-cols-4">
         <div>
-          <img src="logob-02.png" alt="FactuBot" class="h-8 w-auto" />
+          <img src="LogoBoqi.svg" alt="Boqi" class="h-8 w-auto" />
           <p class="mt-3 text-sm text-white/60">
-            Facturacion automatica para negocios que quieren crecer sin friccion.
+            Facturación automática para negocios que quieren crecer sin fricción.
           </p>
+          <div class="mt-4 flex items-center gap-3">
+            <a href="#" target="_blank" rel="noopener" class="text-white/40 transition hover:text-white" aria-label="Facebook"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            <a href="#" target="_blank" rel="noopener" class="text-white/40 transition hover:text-white" aria-label="Instagram"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+            <a href="#" target="_blank" rel="noopener" class="text-white/40 transition hover:text-white" aria-label="TikTok"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+            <a href="#" target="_blank" rel="noopener" class="text-white/40 transition hover:text-white" aria-label="YouTube"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          </div>
         </div>
         <div>
           <p class="text-sm font-semibold">Producto</p>
           <ul class="mt-3 space-y-2 text-sm text-white/60">
             <li><a href="#pasos" class="transition hover:text-white">Proceso</a></li>
-            <li><a href="#pricing" class="transition hover:text-white">Precio</a></li>
+            <li><a href="#pricing" class="transition hover:text-white">Planes</a></li>
             <li><a href="#faq" class="transition hover:text-white">FAQ</a></li>
           </ul>
         </div>
         <div>
           <p class="text-sm font-semibold">Legal</p>
           <ul class="mt-3 space-y-2 text-sm text-white/60">
-            <li><a href="terminos.html" class="transition hover:text-white">Terminos</a></li>
+            <li><a href="terminos.html" class="transition hover:text-white">Términos</a></li>
             <li><a href="privacidad.html" class="transition hover:text-white">Privacidad</a></li>
           </ul>
         </div>
@@ -373,7 +787,7 @@
         </div>
       </div>
       <div class="mx-auto mt-10 max-w-6xl text-xs text-white/50">
-        (c) 2026 FACTUBOT. Todos los derechos reservados.
+        (c) 2026 BOQI. Todos los derechos reservados.
       </div>
     </footer>
 
@@ -400,6 +814,18 @@
           }
         });
       });
+
+      function setBilling(mode) {
+        const isAnnual = mode === 'annual';
+        const btnM = document.getElementById('btn-monthly');
+        const btnA = document.getElementById('btn-annual');
+        const on = 'rounded-full px-6 py-2.5 text-sm font-semibold bg-brand text-dark transition';
+        const off = 'rounded-full px-6 py-2.5 text-sm font-semibold text-white/70 transition hover:text-white';
+        btnM.className = isAnnual ? off : on;
+        btnA.className = isAnnual ? on : off;
+        document.querySelectorAll('.price-monthly').forEach(el => el.classList.toggle('hidden', isAnnual));
+        document.querySelectorAll('.price-annual').forEach(el => el.classList.toggle('hidden', !isAnnual));
+      }
 
       lucide.createIcons();
     </script>
