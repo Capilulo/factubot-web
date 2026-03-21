@@ -49,18 +49,29 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-      @keyframes chat-scroll-sim {
-        0%   { transform: translateY(0); opacity: 1; }
-        50%  { transform: translateY(-420px); opacity: 1; }
-        66%  { transform: translateY(-420px); opacity: 1; }
-        75%  { transform: translateY(-420px); opacity: 0; }
-        79%  { transform: translateY(0); opacity: 0; }
-        83%  { transform: translateY(0); opacity: 1; }
-        100% { transform: translateY(0); opacity: 1; }
+      @keyframes chat-msg-pop {
+        0%   { max-height: 0; opacity: 0; transform: scale(0.96); margin-bottom: 0; }
+        8%   { max-height: 260px; opacity: 1; transform: scale(1); margin-bottom: 1rem; }
+        72%  { max-height: 260px; opacity: 1; transform: scale(1); margin-bottom: 1rem; }
+        78%  { max-height: 0; opacity: 0; transform: scale(0.96); margin-bottom: 0; }
+        100% { max-height: 0; opacity: 0; transform: scale(0.96); margin-bottom: 0; }
       }
-      .chat-track {
-        animation: chat-scroll-sim 12s ease-in-out infinite;
+      .chat-msg {
+        overflow: hidden;
+        animation: chat-msg-pop 14s ease-out infinite;
       }
+      .chat-msg:nth-child(1) { animation-delay: 0s; }
+      .chat-msg:nth-child(2) { animation-delay: 1.6s; }
+      .chat-msg:nth-child(3) { animation-delay: 3.2s; }
+      .chat-msg:nth-child(4) { animation-delay: 4.8s; }
+      .chat-msg:nth-child(5) { animation-delay: 6.4s; }
+      @keyframes chat-fade {
+        0%, 72% { opacity: 1; }
+        78% { opacity: 0; }
+        85% { opacity: 1; }
+        100% { opacity: 1; }
+      }
+      .chat-track { animation: chat-fade 14s ease-out infinite; }
     </style>
   </head>
   <body class="bg-dark text-slate-100 antialiased font-body">
@@ -208,12 +219,12 @@
                 <span class="rounded-full bg-brand/20 px-3 py-1 text-xs text-brand">En línea</span>
               </div>
 
-              <div class="mt-6 h-[300px] overflow-hidden">
-                <div class="chat-track space-y-4">
-                <div class="ml-auto w-fit max-w-[80%] rounded-2xl rounded-br-sm bg-brand/20 px-4 py-3 text-sm text-brand/80">
+              <div class="relative mt-6 h-[300px] overflow-hidden">
+                <div class="chat-track absolute bottom-0 left-0 right-0 flex flex-col">
+                <div class="chat-msg ml-auto w-fit max-w-[80%] shrink-0 rounded-2xl rounded-br-sm bg-brand/20 px-4 py-3 text-sm text-brand/80">
                   Hola, quiero facturar tres camisetas a 4 dólares cada una para el cliente con RUC: 1790000000.
                 </div>
-                <div class="w-fit max-w-[85%] rounded-2xl rounded-bl-sm bg-white/10 px-4 py-3 text-sm text-white/80 whitespace-pre-line">
+                <div class="chat-msg w-fit max-w-[85%] shrink-0 rounded-2xl rounded-bl-sm bg-white/10 px-4 py-3 text-sm text-white/80 whitespace-pre-line">
                   👤 Cliente: 1790000000
 
                   🛒 Detalle:
@@ -227,13 +238,13 @@
 
                   <span class="mt-3 inline-block rounded-full bg-brand px-4 py-2 text-xs font-bold text-dark">ENVIAR FACTURA AL SRI</span>
                 </div>
-                <div class="ml-auto w-fit max-w-[80%] rounded-2xl rounded-br-sm bg-brand/20 px-4 py-3 text-sm text-brand/80">
+                <div class="chat-msg ml-auto w-fit max-w-[80%] shrink-0 rounded-2xl rounded-br-sm bg-brand/20 px-4 py-3 text-sm text-brand/80">
                   "ENVIAR FACTURA AL SRI"
                 </div>
-                <div class="w-fit max-w-[80%] rounded-2xl rounded-bl-sm bg-white/10 px-4 py-3 text-sm text-white/80">
+                <div class="chat-msg w-fit max-w-[80%] shrink-0 rounded-2xl rounded-bl-sm bg-white/10 px-4 py-3 text-sm text-white/80">
                   Conectando con el SRI
                 </div>
-                <div class="w-fit max-w-[85%] rounded-2xl rounded-bl-sm bg-white/10 px-4 py-3 text-sm text-white/80">
+                <div class="chat-msg w-fit max-w-[85%] shrink-0 rounded-2xl rounded-bl-sm bg-white/10 px-4 py-3 text-sm text-white/80">
                   <p>Factura autorizada. Autorización: 001-001-000123456</p>
                   <p class="mt-2">Aquí tienes tu factura, hemos enviado una copia al correo de tu cliente:</p>
                   <div class="mt-3 flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-3 py-2">
@@ -285,7 +296,7 @@
             </div>
 
             <div>
-              <p class="mb-3 text-5xl font-semibold text-white">¿Cómo comenzar?</p>
+              <p class="mb-3 font-display text-[25px] font-semibold text-white">¿Cómo comenzar?</p>
               <div class="relative aspect-video rounded-3xl border border-white/10 bg-white/5 overflow-hidden flex items-center justify-center">
                 <div class="absolute inset-0 bg-gradient-to-br from-brand/5 to-transparent"></div>
                 <div class="relative flex flex-col items-center gap-4 text-white/50">
@@ -299,7 +310,7 @@
           <!-- Bloque 2: Facturación (Video + Paso 3) -->
           <div class="mt-12 grid gap-8 md:grid-cols-2 items-center">
             <div class="md:order-1">
-              <p class="mb-3 text-5xl font-semibold text-white">¿Cómo enviar una factura?</p>
+              <p class="mb-3 font-display text-[25px] font-semibold text-white">¿Cómo enviar una factura?</p>
               <div class="relative aspect-video rounded-3xl border border-white/10 bg-white/5 overflow-hidden flex items-center justify-center">
                 <div class="absolute inset-0 bg-gradient-to-br from-brand/5 to-transparent"></div>
                 <div class="relative flex flex-col items-center gap-4 text-white/50">
