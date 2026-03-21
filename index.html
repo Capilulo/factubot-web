@@ -49,26 +49,18 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-      @keyframes chat-msg-in {
-        from {
-          opacity: 0;
-          transform: translateY(8px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
+      @keyframes chat-scroll-sim {
+        0%   { transform: translateY(0); opacity: 1; }
+        50%  { transform: translateY(-420px); opacity: 1; }
+        66%  { transform: translateY(-420px); opacity: 1; }
+        75%  { transform: translateY(-420px); opacity: 0; }
+        79%  { transform: translateY(0); opacity: 0; }
+        83%  { transform: translateY(0); opacity: 1; }
+        100% { transform: translateY(0); opacity: 1; }
       }
-      .chat-msgs > * {
-        opacity: 0;
-        animation: chat-msg-in 0.4s ease-out forwards;
+      .chat-track {
+        animation: chat-scroll-sim 12s ease-in-out infinite;
       }
-      .chat-msgs > *:nth-child(1) { animation-delay: 0.4s; }
-      .chat-msgs > *:nth-child(2) { animation-delay: 0.9s; }
-      .chat-msgs > *:nth-child(3) { animation-delay: 1.5s; }
-      .chat-msgs > *:nth-child(4) { animation-delay: 2.1s; }
-      .chat-msgs > *:nth-child(5) { animation-delay: 2.7s; }
-      .chat-msgs > *:nth-child(6) { animation-delay: 3.3s; }
     </style>
   </head>
   <body class="bg-dark text-slate-100 antialiased font-body">
@@ -216,7 +208,8 @@
                 <span class="rounded-full bg-brand/20 px-3 py-1 text-xs text-brand">En línea</span>
               </div>
 
-              <div class="chat-msgs mt-6 space-y-4">
+              <div class="mt-6 h-[300px] overflow-hidden">
+                <div class="chat-track space-y-4">
                 <div class="ml-auto w-fit max-w-[80%] rounded-2xl rounded-br-sm bg-brand/20 px-4 py-3 text-sm text-brand/80">
                   Hola, quiero facturar tres camisetas a 4 dólares cada una para el cliente con RUC: 1790000000.
                 </div>
@@ -247,6 +240,7 @@
                     <i data-lucide="file-text" class="h-4 w-4 shrink-0 text-white/60"></i>
                     <span class="text-xs text-white/70">factura.pdf</span>
                   </div>
+                </div>
                 </div>
               </div>
             </div>
@@ -291,7 +285,7 @@
             </div>
 
             <div>
-              <p class="mb-3 text-base font-semibold text-white">¿Cómo comenzar?</p>
+              <p class="mb-3 text-5xl font-semibold text-white">¿Cómo comenzar?</p>
               <div class="relative aspect-video rounded-3xl border border-white/10 bg-white/5 overflow-hidden flex items-center justify-center">
                 <div class="absolute inset-0 bg-gradient-to-br from-brand/5 to-transparent"></div>
                 <div class="relative flex flex-col items-center gap-4 text-white/50">
@@ -305,7 +299,7 @@
           <!-- Bloque 2: Facturación (Video + Paso 3) -->
           <div class="mt-12 grid gap-8 md:grid-cols-2 items-center">
             <div class="md:order-1">
-              <p class="mb-3 text-base font-semibold text-white">¿Cómo enviar una factura?</p>
+              <p class="mb-3 text-5xl font-semibold text-white">¿Cómo enviar una factura?</p>
               <div class="relative aspect-video rounded-3xl border border-white/10 bg-white/5 overflow-hidden flex items-center justify-center">
                 <div class="absolute inset-0 bg-gradient-to-br from-brand/5 to-transparent"></div>
                 <div class="relative flex flex-col items-center gap-4 text-white/50">
