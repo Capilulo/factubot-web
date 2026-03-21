@@ -47,6 +47,29 @@
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+      @keyframes chat-msg-in {
+        from {
+          opacity: 0;
+          transform: translateY(8px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .chat-msgs > * {
+        opacity: 0;
+        animation: chat-msg-in 0.4s ease-out forwards;
+      }
+      .chat-msgs > *:nth-child(1) { animation-delay: 0.4s; }
+      .chat-msgs > *:nth-child(2) { animation-delay: 0.9s; }
+      .chat-msgs > *:nth-child(3) { animation-delay: 1.5s; }
+      .chat-msgs > *:nth-child(4) { animation-delay: 2.1s; }
+      .chat-msgs > *:nth-child(5) { animation-delay: 2.7s; }
+      .chat-msgs > *:nth-child(6) { animation-delay: 3.3s; }
+    </style>
   </head>
   <body class="bg-dark text-slate-100 antialiased font-body">
     <!-- Background atmosphere -->
@@ -193,7 +216,7 @@
                 <span class="rounded-full bg-brand/20 px-3 py-1 text-xs text-brand">En línea</span>
               </div>
 
-              <div class="mt-6 min-h-[520px] space-y-4">
+              <div class="chat-msgs mt-6 space-y-4">
                 <div class="ml-auto w-fit max-w-[80%] rounded-2xl rounded-br-sm bg-brand/20 px-4 py-3 text-sm text-brand/80">
                   Hola, quiero facturar tres camisetas a 4 dólares cada una para el cliente con RUC: 1790000000.
                 </div>
