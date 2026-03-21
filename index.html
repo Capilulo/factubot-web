@@ -193,27 +193,37 @@
                 <span class="rounded-full bg-brand/20 px-3 py-1 text-xs text-brand">En línea</span>
               </div>
 
-              <div class="mt-6 space-y-4">
-                <div class="w-fit max-w-[80%] rounded-2xl rounded-bl-sm bg-white/10 px-4 py-3 text-sm text-white/80">
-                  Hola! Cual es el RUC y monto de la factura?
+              <div class="mt-6 max-h-[380px] space-y-4 overflow-y-auto">
+                <div class="ml-auto w-fit max-w-[80%] rounded-2xl rounded-br-sm bg-brand/20 px-4 py-3 text-sm text-brand/80">
+                  Hola, quiero facturar tres camisetas a 4 dólares cada una para el cliente con RUC: 1790000000.
+                </div>
+                <div class="w-fit max-w-[85%] rounded-2xl rounded-bl-sm bg-white/10 px-4 py-3 text-sm text-white/80 whitespace-pre-line">
+                  👤 Cliente: 1790000000
+
+                  🛒 Detalle:
+                  1) camisetas x3 @ $4.00 = $12.00
+
+                  BASE: $12.00
+                  DCTO(-0%): $0.00
+                  Subtotal: $12.00
+                  IVA (15%): $1.80
+                  💰 TOTAL: $13.80
+
+                  <span class="mt-3 inline-block rounded-full bg-brand px-4 py-2 text-xs font-bold text-dark">ENVIAR FACTURA AL SRI</span>
                 </div>
                 <div class="ml-auto w-fit max-w-[80%] rounded-2xl rounded-br-sm bg-brand/20 px-4 py-3 text-sm text-brand/80">
-                  RUC 1790000000, total 125.50
+                  "ENVIAR FACTURA AL SRI"
                 </div>
                 <div class="w-fit max-w-[80%] rounded-2xl rounded-bl-sm bg-white/10 px-4 py-3 text-sm text-white/80">
-                  Factura generada y enviada. Numero 000123.
+                  Conectando con el SRI
                 </div>
-              </div>
-
-              <div class="mt-6 grid grid-cols-3 gap-3">
-                <div class="rounded-xl border border-white/10 bg-white/5 p-3 text-center text-xs text-white/70">
-                  PDF
-                </div>
-                <div class="rounded-xl border border-white/10 bg-white/5 p-3 text-center text-xs text-white/70">
-                  XML
-                </div>
-                <div class="rounded-xl border border-white/10 bg-white/5 p-3 text-center text-xs text-white/70">
-                  SRI OK
+                <div class="w-fit max-w-[85%] rounded-2xl rounded-bl-sm bg-white/10 px-4 py-3 text-sm text-white/80">
+                  <p>Factura autorizada. Autorización: 001-001-000123456</p>
+                  <p class="mt-2">Aquí tienes tu factura, hemos enviado una copia al correo de tu cliente:</p>
+                  <div class="mt-3 flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-3 py-2">
+                    <i data-lucide="file-text" class="h-4 w-4 shrink-0 text-white/60"></i>
+                    <span class="text-xs text-white/70">factura.pdf</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -257,22 +267,28 @@
               </article>
             </div>
 
-            <div class="relative aspect-video rounded-3xl border border-white/10 bg-white/5 overflow-hidden flex items-center justify-center">
-              <div class="absolute inset-0 bg-gradient-to-br from-brand/5 to-transparent"></div>
-              <div class="relative flex flex-col items-center gap-4 text-white/50">
-                <i data-lucide="play-circle" class="h-16 w-16"></i>
-                <p class="text-sm font-medium">Proceso de onboarding</p>
+            <div>
+              <p class="mb-3 text-base font-semibold text-white">¿Cómo comenzar?</p>
+              <div class="relative aspect-video rounded-3xl border border-white/10 bg-white/5 overflow-hidden flex items-center justify-center">
+                <div class="absolute inset-0 bg-gradient-to-br from-brand/5 to-transparent"></div>
+                <div class="relative flex flex-col items-center gap-4 text-white/50">
+                  <i data-lucide="play-circle" class="h-16 w-16"></i>
+                  <p class="text-sm font-medium">Proceso de onboarding</p>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Bloque 2: Facturación (Video + Paso 3) -->
           <div class="mt-12 grid gap-8 md:grid-cols-2 items-center">
-            <div class="relative aspect-video rounded-3xl border border-white/10 bg-white/5 overflow-hidden flex items-center justify-center md:order-1">
-              <div class="absolute inset-0 bg-gradient-to-br from-brand/5 to-transparent"></div>
-              <div class="relative flex flex-col items-center gap-4 text-white/50">
-                <i data-lucide="play-circle" class="h-16 w-16"></i>
-                <p class="text-sm font-medium">Cómo facturar con Boqi</p>
+            <div class="md:order-1">
+              <p class="mb-3 text-base font-semibold text-white">¿Cómo enviar una factura?</p>
+              <div class="relative aspect-video rounded-3xl border border-white/10 bg-white/5 overflow-hidden flex items-center justify-center">
+                <div class="absolute inset-0 bg-gradient-to-br from-brand/5 to-transparent"></div>
+                <div class="relative flex flex-col items-center gap-4 text-white/50">
+                  <i data-lucide="play-circle" class="h-16 w-16"></i>
+                  <p class="text-sm font-medium">Cómo facturar con Boqi</p>
+                </div>
               </div>
             </div>
 
@@ -350,7 +366,7 @@
                 </li>
               </ul>
 
-              <a href="https://wa.me/593992907513?text=Hola%2C%20quiero%20el%20plan%20Básico" target="_blank" rel="noopener" class="mt-auto block rounded-full border border-white/20 py-3 text-center text-sm font-semibold text-white/90 transition hover:border-white/40 hover:bg-white/5">
+              <a href="https://wa.me/593992907513?text=Hola%2C%20quiero%20comenzar%20a%20usar%20boqi." target="_blank" rel="noopener" class="mt-auto block rounded-full border border-white/20 py-3 text-center text-sm font-semibold text-white/90 transition hover:border-white/40 hover:bg-white/5">
                 Empezar ahora
               </a>
             </div>
@@ -395,7 +411,7 @@
                 </li>
               </ul>
 
-              <a href="https://wa.me/593992907513?text=Hola%2C%20quiero%20el%20plan%20Estándar" target="_blank" rel="noopener" class="mt-auto block rounded-full border border-white/20 py-3 text-center text-sm font-semibold text-white/90 transition hover:border-white/40 hover:bg-white/5">
+              <a href="https://wa.me/593992907513?text=Hola%2C%20quiero%20comenzar%20a%20usar%20boqi." target="_blank" rel="noopener" class="mt-auto block rounded-full border border-white/20 py-3 text-center text-sm font-semibold text-white/90 transition hover:border-white/40 hover:bg-white/5">
                 Empezar ahora
               </a>
             </div>
@@ -442,7 +458,7 @@
                 </li>
               </ul>
 
-              <a href="https://wa.me/593992907513?text=Hola%2C%20quiero%20el%20plan%20Intensivo%20Pro" target="_blank" rel="noopener" class="mt-auto block rounded-full bg-brand py-3 text-center text-sm font-semibold text-dark shadow-glow transition hover:-translate-y-0.5">
+              <a href="https://wa.me/593992907513?text=Hola%2C%20quiero%20comenzar%20a%20usar%20boqi." target="_blank" rel="noopener" class="mt-auto block rounded-full bg-brand py-3 text-center text-sm font-semibold text-dark shadow-glow transition hover:-translate-y-0.5">
                 Empezar ahora
               </a>
             </div>
@@ -476,7 +492,7 @@
                 </li>
               </ul>
 
-              <a href="https://wa.me/593992907513?text=Hola%2C%20quiero%20conocer%20el%20plan%20Corporativo" target="_blank" rel="noopener" class="mt-auto block rounded-full border border-white/20 py-3 text-center text-sm font-semibold text-white/90 transition hover:border-white/40 hover:bg-white/5">
+              <a href="https://wa.me/593963450243?text=Hola%2C%20quiero%20un%20plan%20a%20mi%20medida." target="_blank" rel="noopener" class="mt-auto block rounded-full border border-white/20 py-3 text-center text-sm font-semibold text-white/90 transition hover:border-white/40 hover:bg-white/5">
                 Contactar ventas
               </a>
             </div>
