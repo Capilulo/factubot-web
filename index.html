@@ -48,23 +48,6 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <style>
-      @keyframes marquee-scroll {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); }
-      }
-      .marquee-wrap {
-        overflow: hidden;
-      }
-      .marquee-track {
-        display: flex;
-        width: max-content;
-        animation: marquee-scroll 14s linear infinite;
-      }
-      .marquee-track:hover {
-        animation-play-state: paused;
-      }
-    </style>
   </head>
   <body class="bg-dark text-slate-100 antialiased font-body">
     <!-- Background atmosphere -->
@@ -86,22 +69,9 @@
       </svg>
     </div>
 
-    <!-- Marquesina promocional (encima del menú) -->
-    <div class="marquee-wrap w-full border-b border-brand/20 bg-brand/10 py-1.5">
-      <div class="marquee-track">
-        <div class="flex shrink-0 items-center gap-12 pr-12">
-          <span class="whitespace-nowrap text-xs font-semibold text-brand">Tus tres primeras facturas gratis</span>
-          <span class="whitespace-nowrap text-xs font-semibold text-brand">Tus tres primeras facturas gratis</span>
-          <span class="whitespace-nowrap text-xs font-semibold text-brand">Tus tres primeras facturas gratis</span>
-          <span class="whitespace-nowrap text-xs font-semibold text-brand">Tus tres primeras facturas gratis</span>
-        </div>
-        <div class="flex shrink-0 items-center gap-12 pr-12">
-          <span class="whitespace-nowrap text-xs font-semibold text-brand">Tus tres primeras facturas gratis</span>
-          <span class="whitespace-nowrap text-xs font-semibold text-brand">Tus tres primeras facturas gratis</span>
-          <span class="whitespace-nowrap text-xs font-semibold text-brand">Tus tres primeras facturas gratis</span>
-          <span class="whitespace-nowrap text-xs font-semibold text-brand">Tus tres primeras facturas gratis</span>
-        </div>
-      </div>
+    <!-- Barra promocional (texto fijo centrado, encima del menú) -->
+    <div class="w-full border-b border-brand/20 bg-brand/10 py-1.5 text-center">
+      <p class="text-xs font-semibold text-brand">Tus tres primeras facturas gratis</p>
     </div>
 
     <!-- Navbar -->
