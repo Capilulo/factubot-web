@@ -59,7 +59,7 @@
       .marquee-track {
         display: flex;
         width: max-content;
-        animation: marquee-scroll 22s linear infinite;
+        animation: marquee-scroll 14s linear infinite;
       }
       .marquee-track:hover {
         animation-play-state: paused;
@@ -84,6 +84,24 @@
         </defs>
         <rect width="1200" height="600" fill="url(#grid)" />
       </svg>
+    </div>
+
+    <!-- Marquesina promocional (encima del menú) -->
+    <div class="marquee-wrap w-full border-b border-brand/20 bg-brand/10 py-1.5">
+      <div class="marquee-track">
+        <div class="flex shrink-0 items-center gap-12 pr-12">
+          <span class="whitespace-nowrap text-xs font-semibold text-brand">Tus tres primeras facturas gratis</span>
+          <span class="whitespace-nowrap text-xs font-semibold text-brand">Tus tres primeras facturas gratis</span>
+          <span class="whitespace-nowrap text-xs font-semibold text-brand">Tus tres primeras facturas gratis</span>
+          <span class="whitespace-nowrap text-xs font-semibold text-brand">Tus tres primeras facturas gratis</span>
+        </div>
+        <div class="flex shrink-0 items-center gap-12 pr-12">
+          <span class="whitespace-nowrap text-xs font-semibold text-brand">Tus tres primeras facturas gratis</span>
+          <span class="whitespace-nowrap text-xs font-semibold text-brand">Tus tres primeras facturas gratis</span>
+          <span class="whitespace-nowrap text-xs font-semibold text-brand">Tus tres primeras facturas gratis</span>
+          <span class="whitespace-nowrap text-xs font-semibold text-brand">Tus tres primeras facturas gratis</span>
+        </div>
+      </div>
     </div>
 
     <!-- Navbar -->
@@ -159,16 +177,10 @@
       <!-- Hero -->
       <section id="inicio" class="px-4 pb-12 pt-10 md:px-6">
         <div class="mx-auto grid max-w-6xl items-start gap-12 md:grid-cols-[65fr_35fr]">
-          <div>
+          <div class="pt-[50px]">
             <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.2em] text-white/70">
               <span class="h-2 w-2 rounded-full bg-brand"></span>
               Facturación sin fricción
-            </div>
-            <div class="marquee-wrap mt-4 w-full max-w-xl rounded-full border border-brand/30 bg-brand/10 py-2">
-              <div class="marquee-track gap-12 pr-12 text-sm font-semibold text-brand">
-                <span class="whitespace-nowrap">Tus tres primeras facturas gratis</span>
-                <span class="whitespace-nowrap">Tus tres primeras facturas gratis</span>
-              </div>
             </div>
             <h1 class="mt-6 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl font-display">
               Factura sin salir de WhatsApp con
@@ -177,7 +189,10 @@
               </span>
             </h1>
             <p class="mt-6 max-w-xl text-base text-white/70 md:text-lg">
-              Envía un Hola al <a href="https://wa.me/593992907513?text=Hola" target="_blank" rel="noopener" class="text-brand underline underline-offset-2 font-semibold hover:text-brand/80 transition">+593 99 290 7513</a> y comienza a facturar en minutos. Completa el registro, sube tu firma electrónica, ten a mano el <strong class="text-white/90">último número de tu factura</strong> y emite facturas autorizadas por el SRI directamente desde WhatsApp, sin apps adicionales ni complicaciones. Las tres primeras facturas van por nuestra cuenta, úsalas para ver lo fácil que es.
+              Lo hacemos más fácil: emite facturas autorizadas por el SRI directo desde tu WhatsApp, sin complicaciones. Solo envía &quot;Hola&quot; al <a href="https://wa.me/593992907513?text=Hola" target="_blank" rel="noopener" class="text-brand underline underline-offset-2 font-semibold hover:text-brand/80 transition">+593 99 290 7513</a>, carga tu firma electrónica, ten a mano tu última factura y listo.
+            </p>
+            <p class="mt-4 max-w-xl text-base font-semibold text-brand md:text-lg">
+              Te regalamos tus tres primeras facturas.
             </p>
 
             <div class="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -270,49 +285,38 @@
             </p>
           </div>
 
-          <!-- Pasos 1 y 2 -->
-          <div class="mt-12 grid gap-6 md:grid-cols-2">
-            <article class="group rounded-3xl border border-white/10 bg-white/5 p-6 transition-transform duration-300 hover:scale-[1.02]">
-              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand/20">
-                <i data-lucide="file-text" class="h-6 w-6 text-brand"></i>
-              </div>
-              <h3 class="mt-6 text-xl font-semibold">1. Tus documentos</h3>
-              <p class="mt-3 text-sm text-white/70">
-                Ten a la mano tu RUC, el archivo .p12 y el <strong class="text-white/85">último número de factura emitida</strong> (o el correlativo que solicite el proceso).
-                <a href="https://wa.me/593992907513?text=Hola%2C%20necesito%20ayuda%20con%20mi%20firma%20electrónica" target="_blank" rel="noopener" class="text-brand underline underline-offset-2 transition hover:text-brand/80">Contáctanos si necesitas tu firma electrónica.</a>
-              </p>
-            </article>
-
-            <article class="group rounded-3xl border border-white/10 bg-white/5 p-6 transition-transform duration-300 hover:scale-[1.02]">
-              <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand/20">
-                <i data-lucide="message-circle" class="h-6 w-6 text-brand"></i>
-              </div>
-              <h3 class="mt-6 text-xl font-semibold">2. Escribe Hola</h3>
-              <p class="mt-3 text-sm text-white/70">
-                Escribe Hola al <a href="https://wa.me/593992907513?text=Hola" target="_blank" rel="noopener" class="text-brand font-semibold underline underline-offset-2 hover:text-brand/80 transition">+593 99 290 7513</a>, sigue el proceso confirmando tus datos y sube tu firma; si el flujo lo requiere, también te pedirán el <strong class="text-white/85">último número de factura</strong>. Puedes borrar la firma y la contraseña del chat luego de enviarlo.
-              </p>
-            </article>
-          </div>
-
-          <!-- Vídeo: Para comenzar -->
-          <div class="mt-12">
-            <p class="mb-3 font-display text-[25px] font-semibold text-white">Para comenzar</p>
-            <div class="overflow-hidden rounded-3xl border border-white/10 bg-black/40">
-              <video class="aspect-video w-full object-cover" controls playsinline preload="metadata" src="Videos/Onboarding.mp4"></video>
+          <!-- Pasos + vídeos verticales (2 columnas en desktop) -->
+          <div class="mt-12 flex flex-col gap-10 md:grid md:grid-cols-2 md:items-center md:gap-10">
+            <div class="flex flex-col gap-6 md:col-start-1 md:row-start-1">
+              <article class="group rounded-3xl border border-white/10 bg-white/5 p-6 transition-transform duration-300 hover:scale-[1.02]">
+                <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand/20">
+                  <i data-lucide="file-text" class="h-6 w-6 text-brand"></i>
+                </div>
+                <h3 class="mt-6 text-xl font-semibold">1. Tus documentos</h3>
+                <p class="mt-3 text-sm text-white/70">
+                  Ten a la mano tu RUC, el archivo .p12 y el <strong class="text-white/85">último número de factura emitida</strong> (o el correlativo que solicite el proceso).
+                  <a href="https://wa.me/593992907513?text=Hola%2C%20necesito%20ayuda%20con%20mi%20firma%20electrónica" target="_blank" rel="noopener" class="text-brand underline underline-offset-2 transition hover:text-brand/80">Contáctanos si necesitas tu firma electrónica.</a>
+                </p>
+              </article>
+              <article class="group rounded-3xl border border-white/10 bg-white/5 p-6 transition-transform duration-300 hover:scale-[1.02]">
+                <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand/20">
+                  <i data-lucide="message-circle" class="h-6 w-6 text-brand"></i>
+                </div>
+                <h3 class="mt-6 text-xl font-semibold">2. Escribe Hola</h3>
+                <p class="mt-3 text-sm text-white/70">
+                  Escribe Hola al <a href="https://wa.me/593992907513?text=Hola" target="_blank" rel="noopener" class="text-brand font-semibold underline underline-offset-2 hover:text-brand/80 transition">+593 99 290 7513</a>, sigue el proceso confirmando tus datos y sube tu firma; si el flujo lo requiere, también te pedirán el <strong class="text-white/85">último número de factura</strong>. Puedes borrar la firma y la contraseña del chat luego de enviarlo.
+                </p>
+              </article>
             </div>
-          </div>
 
-          <!-- Vídeo: Enviar factura -->
-          <div class="mt-12">
-            <p class="mb-3 font-display text-[25px] font-semibold text-white">¿Cómo enviar una factura?</p>
-            <div class="overflow-hidden rounded-3xl border border-white/10 bg-black/40">
-              <video class="aspect-video w-full object-cover" controls playsinline preload="metadata" src="Videos/Factura%20Completa.mp4"></video>
+            <div class="flex justify-center md:col-start-2 md:row-start-1">
+              <div class="w-full max-w-[min(100%,280px)] text-center">
+                <p class="mb-3 font-display text-lg font-semibold text-white">Para comenzar</p>
+                <video class="mx-auto max-h-[500px] w-auto max-w-full rounded-3xl bg-black/40" controls playsinline preload="metadata" src="Videos/Onboarding.mp4"></video>
+              </div>
             </div>
-          </div>
 
-          <!-- Paso 3 -->
-          <div class="mt-12 max-w-2xl">
-            <article class="group rounded-3xl border border-white/10 bg-white/5 p-6 transition-transform duration-300 hover:scale-[1.02]">
+            <article class="group rounded-3xl border border-white/10 bg-white/5 p-6 transition-transform duration-300 hover:scale-[1.02] md:col-start-2 md:row-start-2">
               <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand/20">
                 <i data-lucide="zap" class="h-6 w-6 text-brand"></i>
               </div>
@@ -321,6 +325,13 @@
                 Listo. Dile a Boqi lo que quieres facturar, para quién, y factura sin tanto lío.
               </p>
             </article>
+
+            <div class="flex justify-center md:col-start-1 md:row-start-2">
+              <div class="w-full max-w-[min(100%,280px)] text-center">
+                <p class="mb-3 font-display text-lg font-semibold text-white">¿Cómo enviar una factura?</p>
+                <video class="mx-auto max-h-[500px] w-auto max-w-full rounded-3xl bg-black/40" controls playsinline preload="metadata" src="Videos/Factura%20Completa.mp4"></video>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -521,14 +532,6 @@
 
           </div>
 
-          <!-- Social proof -->
-          <div class="mt-12 text-center">
-            <div class="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm text-white/70">
-              <span class="h-2 w-2 rounded-full bg-brand animate-pulse"></span>
-              500+ negocios ya facturan con BOQI cada mes
-            </div>
-            <p class="mt-4 text-xs text-white/50">Cancelación flexible. Sin costos ocultos. Sin permanencia.</p>
-          </div>
         </div>
       </section>
 
