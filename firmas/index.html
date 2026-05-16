@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOQI | Firma electrónica Uanataca Ecuador</title>
+    <meta
+      name="description"
+      content="Firma electrónica Uanataca en Ecuador. Emisión rápida, válida para facturación electrónica SRI. Solicita la tuya por Telegram."
+    />
+    <link rel="icon" type="image/svg+xml" href="../LogoBoqi.svg" />
+    <link rel="apple-touch-icon" href="../LogoBoqi.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Sora:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: "#b9fa3c",
+              dark: "#04045e",
+            },
+            fontFamily: {
+              display: ["Sora", "ui-sans-serif", "system-ui"],
+              body: ["Manrope", "ui-sans-serif", "system-ui"],
+            },
+            boxShadow: {
+              glow: "0 0 0 1px rgba(185,250,60,0.6), 0 0 40px rgba(185,250,60,0.35)",
+            },
+            backgroundImage: {
+              "hero-radial":
+                "radial-gradient(60% 60% at 50% 0%, rgba(185,250,60,0.25), rgba(4,4,94,0))",
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body class="bg-dark text-slate-100 antialiased font-body">
+    <div class="pointer-events-none fixed inset-0 -z-10">
+      <div class="absolute -top-32 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-brand/20 blur-3xl"></div>
+      <div class="absolute inset-0 bg-hero-radial"></div>
+    </div>
+
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-white/5 backdrop-blur-xl">
+      <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 md:px-6">
+        <a href="../index.html" class="flex items-center" aria-label="Boqi inicio">
+          <img src="../LogoBoqi.svg" alt="Boqi" class="h-8 w-auto" />
+        </a>
+        <nav class="hidden items-center gap-6 text-sm text-slate-300 md:flex">
+          <a href="#beneficios" class="hover:text-brand">Beneficios</a>
+          <a href="#precios" class="hover:text-brand">Precios</a>
+          <a href="#faq" class="hover:text-brand">FAQ</a>
+          <a href="../index.html" class="hover:text-white">Facturación Boqi</a>
+        </nav>
+        <a
+          href="https://t.me/boqi_firmas_control_bot"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="rounded-full bg-brand px-4 py-2 text-sm font-semibold text-dark shadow-glow hover:brightness-110"
+        >
+          Solicitar firma
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="mx-auto max-w-6xl px-4 pb-16 pt-12 md:px-6 md:pt-16">
+        <div class="grid items-center gap-10 lg:grid-cols-2">
+          <div>
+            <p class="mb-3 text-xs font-semibold uppercase tracking-wider text-brand">
+              Distribuidor autorizado · Uanataca Ecuador
+            </p>
+            <h1 class="font-display text-4xl font-bold leading-tight text-white md:text-5xl">
+              Tu firma electrónica lista para facturar con el SRI
+            </h1>
+            <p class="mt-4 max-w-lg text-lg text-slate-300">
+              Emisión ágil de certificados digitales para personas naturales y representantes legales.
+              Válidos para facturación electrónica, contratos y trámites en línea.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a
+                href="https://t.me/boqi_firmas_control_bot"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 font-semibold text-dark shadow-glow hover:brightness-110"
+              >
+                <i data-lucide="send" class="h-4 w-4"></i>
+                Comenzar por Telegram
+              </a>
+              <a
+                href="#precios"
+                class="inline-flex items-center rounded-full border border-white/20 px-6 py-3 font-semibold text-white hover:border-brand/50"
+              >
+                Ver planes
+              </a>
+            </div>
+            <ul class="mt-8 space-y-2 text-sm text-slate-400">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-brand"></i> Cumplimiento normativo Ecuador</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-brand"></i> Archivo P12 o nube</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-brand"></i> Soporte en español</li>
+            </ul>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur">
+            <p class="text-xs uppercase tracking-wider text-slate-400">Certificado emitido</p>
+            <p class="mt-2 font-display text-2xl font-bold text-white">Firma electrónica</p>
+            <p class="text-slate-400">Persona natural · 2 años</p>
+            <p class="mt-6 inline-block rounded-full bg-brand/15 px-3 py-1 text-sm font-semibold text-brand">
+              Listo para instalar
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="beneficios" class="border-t border-white/10 bg-white/[0.02] py-16">
+        <div class="mx-auto max-w-6xl px-4 md:px-6">
+          <h2 class="font-display text-3xl font-bold text-white">¿Por qué Boqi Firmas?</h2>
+          <div class="mt-10 grid gap-6 md:grid-cols-3">
+            <article class="rounded-xl border border-white/10 bg-white/5 p-6">
+              <i data-lucide="zap" class="mb-4 h-8 w-8 text-brand"></i>
+              <h3 class="font-semibold text-white">Entrega rápida</h3>
+              <p class="mt-2 text-sm text-slate-400">Proceso guiado por chat: datos y documentos sin formularios eternos.</p>
+            </article>
+            <article class="rounded-xl border border-white/10 bg-white/5 p-6">
+              <i data-lucide="file-check" class="mb-4 h-8 w-8 text-brand"></i>
+              <h3 class="font-semibold text-white">Facturación electrónica</h3>
+              <p class="mt-2 text-sm text-slate-400">Compatible con requisitos del Servicio de Rentas Internas del Ecuador.</p>
+            </article>
+            <article class="rounded-xl border border-white/10 bg-white/5 p-6">
+              <i data-lucide="building-2" class="mb-4 h-8 w-8 text-brand"></i>
+              <h3 class="font-semibold text-white">Persona natural o empresa</h3>
+              <p class="mt-2 text-sm text-slate-400">Uso personal o representante legal con validación de identidad (KYC).</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="precios" class="py-16">
+        <div class="mx-auto max-w-6xl px-4 md:px-6">
+          <h2 class="font-display text-3xl font-bold text-white">
+            Planes orientativos <span class="text-lg font-normal text-slate-400">(sin IVA)</span>
+          </h2>
+          <p class="mt-2 text-slate-400">Precios de referencia. El total final incluye IVA según normativa vigente.</p>
+          <div class="mt-10 grid gap-6 md:grid-cols-3">
+            <article class="rounded-xl border border-white/10 bg-white/5 p-6">
+              <h3 class="text-slate-400">1 año</h3>
+              <p class="mt-2 font-display text-4xl font-bold text-white">$18</p>
+              <p class="text-sm text-slate-500">Persona natural / Rep. legal</p>
+              <ul class="mt-4 list-inside list-disc text-sm text-slate-400">
+                <li>Archivo P12 o nube</li>
+                <li>Uso facturación SRI</li>
+              </ul>
+            </article>
+            <article class="relative rounded-xl border border-brand/40 bg-brand/5 p-6 shadow-glow">
+              <span class="absolute -top-3 left-4 rounded-full bg-brand px-2 py-0.5 text-xs font-bold text-dark">Recomendado</span>
+              <h3 class="text-slate-400">2 años</h3>
+              <p class="mt-2 font-display text-4xl font-bold text-white">$28</p>
+              <p class="text-sm text-slate-500">Mejor relación vigencia / precio</p>
+              <ul class="mt-4 list-inside list-disc text-sm text-slate-400">
+                <li>Archivo P12 o nube</li>
+                <li>Mayor ahorro anual</li>
+              </ul>
+            </article>
+            <article class="rounded-xl border border-white/10 bg-white/5 p-6">
+              <h3 class="text-slate-400">Combo 1 año</h3>
+              <p class="mt-2 font-display text-4xl font-bold text-white">$19</p>
+              <p class="text-sm text-slate-500">P12 + nube</p>
+              <ul class="mt-4 list-inside list-disc text-sm text-slate-400">
+                <li>Suscriptor general</li>
+                <li>Doble contenedor</li>
+              </ul>
+            </article>
+          </div>
+          <p class="mt-10 text-center">
+            <a
+              href="https://t.me/boqi_firmas_control_bot"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex rounded-full bg-brand px-8 py-3 font-semibold text-dark shadow-glow hover:brightness-110"
+            >
+              Quiero mi firma — Telegram
+            </a>
+          </p>
+        </div>
+      </section>
+
+      <section id="faq" class="border-t border-white/10 bg-white/[0.02] py-16">
+        <div class="mx-auto max-w-3xl px-4 md:px-6">
+          <h2 class="font-display text-3xl font-bold text-white">Preguntas frecuentes</h2>
+          <div class="mt-8 space-y-3">
+            <details class="rounded-xl border border-white/10 bg-white/5 p-4">
+              <summary class="cursor-pointer font-semibold text-white">¿Qué documentos necesito?</summary>
+              <p class="mt-3 text-sm text-slate-400">
+                Cédula (anverso y reverso), selfie con cédula visible y datos personales. Representantes legales: RUC, nombramiento y documentos de la empresa.
+              </p>
+            </details>
+            <details class="rounded-xl border border-white/10 bg-white/5 p-4">
+              <summary class="cursor-pointer font-semibold text-white">¿Cuánto demora la emisión?</summary>
+              <p class="mt-3 text-sm text-slate-400">
+                Tras validar tu información y pago, la emisión suele completarse en el mismo día hábil según volumen y revisión KYC.
+              </p>
+            </details>
+            <details class="rounded-xl border border-white/10 bg-white/5 p-4">
+              <summary class="cursor-pointer font-semibold text-white">¿Es lo mismo que la facturación Boqi?</summary>
+              <p class="mt-3 text-sm text-slate-400">
+                Boqi Firmas es el canal de certificados digitales. La facturación automática por WhatsApp es un producto aparte en
+                <a href="../index.html" class="text-brand hover:underline">boqifactura.com</a>.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/10 py-8 text-center text-sm text-slate-500">
+      <p>© <span id="year"></span> Boqi · Ecuador</p>
+      <p class="mt-1">Certificados Uanataca · No somos el SRI ni reemplazamos asesoría tributaria.</p>
+      <p class="mt-3">
+        <a href="../index.html" class="text-brand hover:underline">Volver al inicio</a>
+        ·
+        <a href="../contacto.html" class="text-slate-400 hover:text-white">Contacto</a>
+      </p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
