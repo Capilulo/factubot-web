@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Firmas Electrónicas - Uanataca</title>
+    <title>BOQI | Firma electrónica Ecuador</title>
     <meta
       name="description"
-      content="Firma electrónica. Obtén tu firma electrónica con nosotros. ¡Contáctanos!"
+      content="Firma electrónica en Ecuador con Boqi. Trámite guiado por WhatsApp o Messenger, válida para facturación electrónica SRI."
     />
     <link rel="icon" type="image/svg+xml" href="../LogoBoqi.svg" />
     <link rel="apple-touch-icon" href="../LogoBoqi.svg" />
@@ -61,7 +61,7 @@
     </div>
 
     <div class="w-full border-b border-brand/20 bg-brand/10 py-1.5 text-center">
-      <p class="text-xs font-semibold text-brand">Distribuidor autorizado · Emisión con validez legal en Ecuador</p>
+      <p class="text-xs font-semibold text-brand">Boqi · Firma electrónica con validez legal en Ecuador</p>
     </div>
 
     <header class="sticky top-0 z-50 border-b border-white/10 bg-white/5 backdrop-blur-xl">
@@ -117,7 +117,7 @@
           <div class="pt-4 md:pt-8">
             <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.2em] text-white/70">
               <span class="h-2 w-2 rounded-full bg-brand"></span>
-              Certificado digital
+              Certificado digital Boqi
             </div>
             <h1 class="mt-6 font-display text-4xl font-bold leading-tight text-white md:text-5xl lg:text-[3.25rem]">
               Tu firma electrónica lista para facturar con el
@@ -165,7 +165,7 @@
               </li>
               <li class="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-white/70">
                 <i data-lucide="clock" class="mt-0.5 h-5 w-5 shrink-0 text-brand"></i>
-                Proceso ágil por chat, sin formularios extensos.
+                Proceso guiado paso a paso, sin formularios eternos
               </li>
               <li class="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-white/70">
                 <i data-lucide="user-check" class="mt-0.5 h-5 w-5 shrink-0 text-brand"></i>
@@ -194,7 +194,7 @@
                   Hola, necesito firma para facturar. Persona natural, 2 años.
                 </div>
                 <div class="max-w-[92%] rounded-2xl rounded-bl-md bg-white/10 px-4 py-3 text-white/80">
-                  ¡Hola! Te ayudo con tu certificado Uanataca. ¿Tienes cédula a la mano? Envíame foto del anverso y reverso.
+                  ¡Hola! Te ayudo con tu firma electrónica Boqi. ¿Tienes cédula a la mano? Envíame foto del anverso y reverso.
                 </div>
                 <div class="ml-auto max-w-[88%] rounded-2xl rounded-br-md bg-brand/15 px-4 py-3 text-brand/90">
                   [foto cédula]
@@ -244,7 +244,7 @@
                 <span class="font-display text-lg font-bold text-brand">4</span>
               </div>
               <h3 class="mt-5 font-semibold">Recibe tu firma</h3>
-              <p class="mt-2 text-sm text-white/65">Certificado por correo, con instrucciones para instalar.</p>
+              <p class="mt-2 text-sm text-white/65">Certificado P12 o nube por correo, con instrucciones para instalar en el SRI.</p>
             </article>
           </div>
         </div>
@@ -255,7 +255,7 @@
           <div class="text-center">
             <p class="text-sm uppercase tracking-[0.2em] text-white/60">Precios orientativos</p>
             <h2 class="mt-4 font-display text-3xl font-semibold md:text-4xl">Planes sin IVA</h2>
-            <p class="mx-auto mt-4 max-w-2xl text-white/65">El total final incluye IVA según normativa vigente. Precios de referencia Uanataca AAA.</p>
+            <p class="mx-auto mt-4 max-w-2xl text-white/65">El total final incluye IVA según normativa vigente. Precios orientativos Boqi.</p>
           </div>
 
           <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -325,7 +325,7 @@
               </p>
             </details>
             <details class="group rounded-2xl border border-white/10 bg-white/5 p-5">
-              <summary class="cursor-pointer list-none font-semibold text-white group-open:text-brand">¿Cuánto tardan en emitir mi firma?</summary>
+              <summary class="cursor-pointer list-none font-semibold text-white group-open:text-brand">¿Cuánto demora?</summary>
               <p class="mt-3 text-sm text-white/65">
                 Tras validar identidad y confirmar el pago, la emisión suele completarse el mismo día hábil según volumen y revisión KYC.
               </p>
@@ -350,7 +350,7 @@
 
     <footer class="border-t border-white/10 px-4 py-10 text-center text-sm text-white/50 md:px-6">
       <p>© <span id="year"></span> Boqi · Ecuador</p>
-      <p class="mt-2">Certificados emitidos. No somos el SRI ni sustituimos asesoría tributaria.</p>
+      <p class="mt-2">Certificados emitidos por Boqi. No somos el SRI ni sustituimos asesoría tributaria.</p>
       <p class="mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
         <a href="../index.html" class="text-brand hover:underline">Inicio facturación</a>
         <a href="../contacto.html" class="hover:text-white">Contacto</a>
@@ -363,7 +363,7 @@
       function waUrl() {
         const c = window.BOQI_FIRMAS || {};
         if (!c.whatsappE164) return null;
-        const text = encodeURIComponent(c.whatsappText || "Hola, quiero tramitar mi firma electrónica");
+        const text = encodeURIComponent(c.whatsappText || "Hola, quiero tramitar mi firma electrónica con Boqi");
         return "https://wa.me/" + c.whatsappE164.replace(/\D/g, "") + "?text=" + text;
       }
 
