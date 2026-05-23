@@ -82,7 +82,7 @@
             target="_blank"
             rel="noopener"
           >
-            Solicitar firma
+            Solicitar en línea
           </a>
         </nav>
 
@@ -105,7 +105,7 @@
           <a class="text-white/80" href="#faq">FAQ</a>
           <a class="text-brand" href="../index.html">Facturación Boqi</a>
           <a id="mobile-cta" class="rounded-full bg-brand px-5 py-2 text-center font-semibold text-dark shadow-glow" href="#" target="_blank" rel="noopener">
-            Solicitar firma
+            Solicitar en línea
           </a>
         </div>
       </div>
@@ -124,15 +124,22 @@
               <span class="text-brand">SRI</span>
             </h1>
             <p class="mt-6 max-w-xl text-base text-white/70 md:text-lg">
-              Trámite 100% por chat: envías tus datos y documentos por
-              <strong class="text-white/90">WhatsApp</strong> o
-              <strong class="text-white/90">Messenger</strong>, validamos identidad y emitimos tu certificado P12 o en nube.
+              Trámite en línea seguro o por chat: formulario web, <strong class="text-white/90">WhatsApp</strong> o
+              <strong class="text-white/90">Messenger</strong>. Validamos identidad y emitimos tu certificado P12 o en nube.
             </p>
 
             <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a
-                id="hero-wa"
+                id="hero-solicitar"
                 class="inline-flex items-center justify-center gap-2 rounded-full bg-brand px-8 py-3 text-sm font-semibold text-dark shadow-glow transition hover:-translate-y-0.5"
+                href="./solicitar/"
+              >
+                <i data-lucide="file-input" class="h-4 w-4"></i>
+                Solicitar en línea
+              </a>
+              <a
+                id="hero-wa"
+                class="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-8 py-3 text-sm font-semibold text-white transition hover:border-brand/40"
                 href="#"
                 target="_blank"
                 rel="noopener"
@@ -216,14 +223,14 @@
       <section id="proceso" class="border-t border-white/10 px-4 py-14 md:px-6">
         <div class="mx-auto max-w-6xl">
           <p class="text-sm uppercase tracking-[0.2em] text-white/60">Cómo funciona</p>
-          <h2 class="mt-4 font-display text-3xl font-semibold md:text-4xl">En 4 pasos, sin salir del chat</h2>
+          <h2 class="mt-4 font-display text-3xl font-semibold md:text-4xl">En 4 pasos, en la web o por chat</h2>
           <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             <article class="rounded-3xl border border-white/10 bg-white/5 p-6">
               <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand/20">
                 <span class="font-display text-lg font-bold text-brand">1</span>
               </div>
-              <h3 class="mt-5 font-semibold">Escríbenos</h3>
-              <p class="mt-2 text-sm text-white/65">Abre WhatsApp o Messenger y cuéntanos si eres persona natural o representante legal.</p>
+              <h3 class="mt-5 font-semibold">Completa el formulario</h3>
+              <p class="mt-2 text-sm text-white/65">En <a href="./solicitar/" class="text-brand underline">boqifactura.com/firmas/solicitar</a> o escríbenos por WhatsApp/Messenger.</p>
             </article>
             <article class="rounded-3xl border border-white/10 bg-white/5 p-6">
               <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand/20">
@@ -303,7 +310,11 @@
           </details>
 
           <div class="mt-12 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <a id="pricing-wa" class="inline-flex items-center gap-2 rounded-full bg-brand px-8 py-3 font-semibold text-dark shadow-glow transition hover:-translate-y-0.5" href="#" target="_blank" rel="noopener">
+            <a id="pricing-solicitar" class="inline-flex items-center gap-2 rounded-full bg-brand px-8 py-3 font-semibold text-dark shadow-glow transition hover:-translate-y-0.5" href="./solicitar/">
+              <i data-lucide="file-input" class="h-4 w-4"></i>
+              Solicitar en línea
+            </a>
+            <a id="pricing-wa" class="inline-flex items-center gap-2 rounded-full border border-white/20 px-8 py-3 font-semibold text-white transition hover:border-brand/40" href="#" target="_blank" rel="noopener">
               <i data-lucide="message-circle" class="h-4 w-4"></i>
               Pedir por WhatsApp
             </a>
@@ -338,9 +349,9 @@
               </p>
             </details>
             <details class="group rounded-2xl border border-white/10 bg-white/5 p-5">
-              <summary class="cursor-pointer list-none font-semibold text-white group-open:text-brand">¿Por qué WhatsApp o Messenger?</summary>
+              <summary class="cursor-pointer list-none font-semibold text-white group-open:text-brand">¿Puedo tramitar solo por la web?</summary>
               <p class="mt-3 text-sm text-white/65">
-                Te guiamos en el chat, recibes documentos al instante y retomamos tu trámite si te falta algo — sin formularios web largos.
+                Sí. Usa <a href="./solicitar/" class="text-brand underline">Solicitar en línea</a> para datos, documentos y pago. También puedes usar WhatsApp o Messenger si prefieres chat.
               </p>
             </details>
           </div>
@@ -370,17 +381,20 @@
       function applyCtas() {
         const c = window.BOQI_FIRMAS || {};
         const messenger = c.messengerUrl || "https://m.me/61579412811926";
+        const solicitar = c.solicitarUrl || "./solicitar/";
         const wa = waUrl();
-        const primary = wa || messenger;
 
-        ["nav-cta", "mobile-cta", "hero-messenger", "pricing-messenger"].forEach((id) => {
+        ["nav-cta", "mobile-cta"].forEach((id) => {
           const el = document.getElementById(id);
-          if (!el) return;
-          if (id.includes("messenger")) el.href = messenger;
-          else if (id.includes("wa")) {
-            if (wa) el.href = wa;
-            else el.href = messenger;
-          } else el.href = primary;
+          if (el) {
+            el.href = solicitar;
+            el.removeAttribute("target");
+          }
+        });
+
+        ["hero-messenger", "pricing-messenger"].forEach((id) => {
+          const el = document.getElementById(id);
+          if (el) el.href = messenger;
         });
 
         ["hero-wa", "pricing-wa"].forEach((id) => {
@@ -391,12 +405,8 @@
             el.classList.remove("opacity-50", "pointer-events-none");
           } else {
             el.href = messenger;
-            el.querySelector("span") || (el.lastChild && (el.childNodes[el.childNodes.length - 1].textContent = " Messenger (WhatsApp pronto)"));
           }
         });
-
-        document.getElementById("hero-messenger").href = messenger;
-        document.getElementById("pricing-messenger").href = messenger;
       }
 
       document.addEventListener("DOMContentLoaded", () => {
