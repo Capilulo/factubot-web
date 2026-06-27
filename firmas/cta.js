@@ -3,5 +3,5 @@ window.BOQI_FIRMAS = {
   messengerUrl: "https://m.me/61579412811926",
   whatsappE164: "593963173441",
   whatsappText: "Hola, quiero tramitar mi firma electrónica con Boqi",
-  solicitarUrl: "./solicitar/",
+  solicitarUrl: "https://boqi-firmas-panel.pages.dev/#/solicitar",
 };

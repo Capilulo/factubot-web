@@ -78,7 +78,7 @@
           <a
             id="nav-cta"
             class="rounded-full bg-brand px-5 py-2 text-sm font-semibold text-dark shadow-glow transition hover:-translate-y-0.5"
-            href="./solicitar/"
+            href="https://boqi-firmas-panel.pages.dev/#/solicitar"
           >
             Solicitar en línea
           </a>
@@ -102,7 +102,7 @@
           <a class="text-white/80" href="#precios">Precios</a>
           <a class="text-white/80" href="#faq">FAQ</a>
           <a class="text-brand" href="../index.html">Facturación Boqi</a>
-          <a id="mobile-cta" class="rounded-full bg-brand px-5 py-2 text-center font-semibold text-dark shadow-glow" href="./solicitar/">
+          <a id="mobile-cta" class="rounded-full bg-brand px-5 py-2 text-center font-semibold text-dark shadow-glow" href="https://boqi-firmas-panel.pages.dev/#/solicitar">
             Solicitar en línea
           </a>
         </div>
@@ -130,7 +130,7 @@
               <a
                 id="hero-solicitar"
                 class="inline-flex items-center justify-center gap-2 rounded-full bg-brand px-8 py-3 text-sm font-semibold text-dark shadow-glow transition hover:-translate-y-0.5"
-                href="./solicitar/"
+                href="https://boqi-firmas-panel.pages.dev/#/solicitar"
               >
                 <i data-lucide="file-input" class="h-4 w-4"></i>
                 Solicitar en línea
@@ -228,7 +228,7 @@
                 <span class="font-display text-lg font-bold text-brand">1</span>
               </div>
               <h3 class="mt-5 font-semibold">Completa el formulario</h3>
-              <p class="mt-2 text-sm text-white/65">En <a href="./solicitar/" class="text-brand underline">boqifactura.com/firmas/solicitar</a> o escríbenos por WhatsApp/Messenger.</p>
+              <p class="mt-2 text-sm text-white/65">Con acceso privado generado desde Boqi o escríbenos por WhatsApp/Messenger.</p>
             </article>
             <article class="rounded-3xl border border-white/10 bg-white/5 p-6">
               <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand/20">
@@ -308,7 +308,7 @@
           </details>
 
           <div class="mt-12 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <a id="pricing-solicitar" class="inline-flex items-center gap-2 rounded-full bg-brand px-8 py-3 font-semibold text-dark shadow-glow transition hover:-translate-y-0.5" href="./solicitar/">
+            <a id="pricing-solicitar" class="inline-flex items-center gap-2 rounded-full bg-brand px-8 py-3 font-semibold text-dark shadow-glow transition hover:-translate-y-0.5" href="https://boqi-firmas-panel.pages.dev/#/solicitar">
               <i data-lucide="file-input" class="h-4 w-4"></i>
               Solicitar en línea
             </a>
@@ -349,7 +349,7 @@
             <details class="group rounded-2xl border border-white/10 bg-white/5 p-5">
               <summary class="cursor-pointer list-none font-semibold text-white group-open:text-brand">¿Puedo tramitar solo por la web?</summary>
               <p class="mt-3 text-sm text-white/65">
-                Sí. Usa <a href="./solicitar/" class="text-brand underline">Solicitar en línea</a> para datos, documentos y pago. También puedes usar WhatsApp o Messenger si prefieres chat.
+                Sí. Primero te atendemos y generamos un acceso privado. Luego usas <a href="https://boqi-firmas-panel.pages.dev/#/solicitar" class="text-brand underline">el formulario seguro</a> para datos y documentos. También puedes usar WhatsApp o Messenger si prefieres chat.
               </p>
             </details>
           </div>
@@ -379,10 +379,10 @@
       function applyCtas() {
         const c = window.BOQI_FIRMAS || {};
         const messenger = c.messengerUrl || "https://m.me/61579412811926";
-        const solicitar = c.solicitarUrl || "./solicitar/";
+        const solicitar = c.solicitarUrl || "https://boqi-firmas-panel.pages.dev/#/solicitar";
         const wa = waUrl();
 
-        ["nav-cta", "mobile-cta"].forEach((id) => {
+        ["nav-cta", "mobile-cta", "hero-solicitar", "pricing-solicitar"].forEach((id) => {
           const el = document.getElementById(id);
           if (el) {
             el.href = solicitar;
