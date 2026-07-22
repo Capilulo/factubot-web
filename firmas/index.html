@@ -72,6 +72,7 @@
 
         <nav class="hidden items-center gap-8 text-sm font-medium md:flex">
           <a class="text-white/80 transition hover:text-white" href="#proceso">Proceso</a>
+          <a class="text-white/80 transition hover:text-white" href="#seguridad">Seguridad</a>
           <a class="text-white/80 transition hover:text-white" href="#precios">Precios</a>
           <a class="text-white/80 transition hover:text-white" href="#faq">FAQ</a>
           <a class="text-white/80 transition hover:text-brand" href="../index.html">Facturación Boqi</a>
@@ -101,6 +102,7 @@
       <div id="mobile-menu" class="hidden border-t border-white/10 bg-dark/95 md:hidden">
         <div class="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-4 text-sm">
           <a class="text-white/80" href="#proceso">Proceso</a>
+          <a class="text-white/80" href="#seguridad">Seguridad</a>
           <a class="text-white/80" href="#precios">Precios</a>
           <a class="text-white/80" href="#faq">FAQ</a>
           <a class="text-brand" href="../index.html">Facturación Boqi</a>
@@ -248,6 +250,52 @@
         </div>
       </section>
 
+      <section id="seguridad" class="border-t border-white/10 bg-white/[0.02] px-4 py-14 md:px-6">
+        <div class="mx-auto max-w-6xl">
+          <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+            <div>
+              <p class="text-sm uppercase tracking-[0.2em] text-white/60">Seguridad y respaldo</p>
+              <h2 class="mt-4 font-display text-3xl font-semibold md:text-4xl">Seguridad y validez de tu firma electrónica</h2>
+              <p class="mt-5 text-white/65">
+                Tu certificado se tramita con una entidad de certificación acreditada en Ecuador y se valida con controles de identidad antes de su emisión.
+              </p>
+              <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <a href="seguridad/" class="inline-flex items-center justify-center gap-2 rounded-full bg-brand px-8 py-3 text-sm font-semibold text-dark shadow-glow transition hover:-translate-y-0.5">
+                  <i data-lucide="shield-check" class="h-4 w-4"></i>
+                  Ver detalles de seguridad
+                </a>
+                <a id="security-wa" href="#" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-8 py-3 text-sm font-semibold text-white transition hover:border-brand/40">
+                  Pedir mi firma por WhatsApp
+                </a>
+              </div>
+            </div>
+
+            <div class="grid gap-4 sm:grid-cols-2">
+              <article class="rounded-3xl border border-white/10 bg-white/5 p-5">
+                <i data-lucide="badge-check" class="h-6 w-6 text-brand"></i>
+                <h3 class="mt-4 font-semibold">Entidad acreditada</h3>
+                <p class="mt-2 text-sm text-white/65">Uanataca Ecuador S.A. consta como entidad acreditada ante ARCOTEL.</p>
+              </article>
+              <article class="rounded-3xl border border-white/10 bg-white/5 p-5">
+                <i data-lucide="fingerprint" class="h-6 w-6 text-brand"></i>
+                <h3 class="mt-4 font-semibold">Identidad verificada</h3>
+                <p class="mt-2 text-sm text-white/65">El trámite revisa datos y documentos para asociar el certificado con su titular.</p>
+              </article>
+              <article class="rounded-3xl border border-white/10 bg-white/5 p-5">
+                <i data-lucide="file-check" class="h-6 w-6 text-brand"></i>
+                <h3 class="mt-4 font-semibold">Cadena de confianza</h3>
+                <p class="mt-2 text-sm text-white/65">Uanataca publica certificados de CA y cadena de confianza para verificación.</p>
+              </article>
+              <article class="rounded-3xl border border-white/10 bg-white/5 p-5">
+                <i data-lucide="lock-keyhole" class="h-6 w-6 text-brand"></i>
+                <h3 class="mt-4 font-semibold">Gestión segura</h3>
+                <p class="mt-2 text-sm text-white/65">El proveedor publica políticas de certificación y cuenta con certificación ISO/IEC 27001.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="precios" class="px-4 py-14 md:px-6">
         <div class="mx-auto max-w-6xl">
           <div class="text-center">
@@ -367,7 +415,7 @@
 
     <footer class="border-t border-white/10 px-4 py-10 text-center text-sm text-white/50 md:px-6">
       <p>© <span id="year"></span> Boqi · Ecuador</p>
-      <p class="mt-2">Certificados emitidos por Boqi. No somos el SRI ni sustituimos asesoría tributaria.</p>
+      <p class="mt-2">Trámite gestionado por Boqi con proveedor acreditado. No somos el SRI ni sustituimos asesoría tributaria.</p>
       <p class="mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
         <a href="../index.html" class="text-brand hover:underline">Inicio facturación</a>
         <a href="../contacto.html" class="hover:text-white">Contacto</a>
@@ -389,7 +437,7 @@
         const messenger = c.messengerUrl || "https://m.me/61579412811926";
         const wa = waUrl();
 
-        ["nav-cta", "mobile-cta", "hero-solicitar", "pricing-wa"].forEach((id) => {
+        ["nav-cta", "mobile-cta", "hero-solicitar", "pricing-wa", "security-wa"].forEach((id) => {
           const el = document.getElementById(id);
           if (el) {
             el.href = wa || messenger;

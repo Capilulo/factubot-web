@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOQI | Seguridad de la firma electrónica</title>
+    <meta
+      name="description"
+      content="Conoce cómo se respalda, valida y protege el trámite de firma electrónica gestionado por Boqi con proveedor acreditado."
+    />
+    <link rel="icon" type="image/svg+xml" href="../../LogoBoqi.svg" />
+    <link rel="apple-touch-icon" href="../../LogoBoqi.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Sora:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: "#b9fa3c",
+              dark: "#04045e",
+            },
+            fontFamily: {
+              display: ["Sora", "ui-sans-serif", "system-ui"],
+              body: ["Manrope", "ui-sans-serif", "system-ui"],
+            },
+            boxShadow: {
+              glow: "0 0 0 1px rgba(185,250,60,0.6), 0 0 40px rgba(185,250,60,0.35)",
+            },
+            backgroundImage: {
+              "hero-radial":
+                "radial-gradient(60% 60% at 50% 0%, rgba(185,250,60,0.25), rgba(4,4,94,0))",
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../cta.js" defer></script>
+  </head>
+  <body class="bg-dark text-slate-100 antialiased font-body">
+    <div class="pointer-events-none fixed inset-0 -z-10">
+      <div class="absolute -top-32 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-brand/20 blur-3xl"></div>
+      <div class="absolute top-1/3 right-0 h-80 w-80 rounded-full bg-brand/10 blur-3xl"></div>
+      <div class="absolute inset-0 bg-hero-radial"></div>
+      <svg class="absolute inset-0 h-full w-full opacity-[0.08]" viewBox="0 0 1200 600" aria-hidden="true">
+        <defs>
+          <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+            <path d="M 48 0 L 0 0 0 48" fill="none" stroke="white" stroke-width="1" />
+          </pattern>
+        </defs>
+        <rect width="1200" height="600" fill="url(#grid)" />
+      </svg>
+    </div>
+
+    <div class="w-full border-b border-brand/20 bg-brand/10 py-1.5 text-center">
+      <p class="text-xs font-semibold text-brand">Boqi · Firma electrónica con respaldo verificable</p>
+    </div>
+
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-white/5 backdrop-blur-xl">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 md:px-6">
+        <a href="../" class="flex items-center" aria-label="Boqi Firmas">
+          <img src="../../LogoBoqi.svg" alt="Boqi" class="h-10 w-auto md:h-12" />
+        </a>
+
+        <nav class="hidden items-center gap-8 text-sm font-medium md:flex">
+          <a class="text-white/80 transition hover:text-white" href="../#proceso">Proceso</a>
+          <a class="text-brand transition hover:text-brand/80" href="./">Seguridad</a>
+          <a class="text-white/80 transition hover:text-white" href="../#precios">Precios</a>
+          <a class="text-white/80 transition hover:text-white" href="../#faq">FAQ</a>
+          <a class="text-white/80 transition hover:text-brand" href="../../index.html">Facturación Boqi</a>
+          <a
+            id="nav-cta"
+            class="rounded-full bg-brand px-5 py-2 text-sm font-semibold text-dark shadow-glow transition hover:-translate-y-0.5"
+            href="#"
+            target="_blank"
+            rel="noopener"
+          >
+            Pedir por WhatsApp
+          </a>
+        </nav>
+
+        <button
+          id="menu-btn"
+          class="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 p-2 text-white md:hidden"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Abrir menú"
+        >
+          <i id="icon-open" data-lucide="menu" class="h-5 w-5"></i>
+          <i id="icon-close" data-lucide="x" class="hidden h-5 w-5"></i>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="hidden border-t border-white/10 bg-dark/95 md:hidden">
+        <div class="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-4 text-sm">
+          <a class="text-white/80" href="../#proceso">Proceso</a>
+          <a class="text-brand" href="./">Seguridad</a>
+          <a class="text-white/80" href="../#precios">Precios</a>
+          <a class="text-white/80" href="../#faq">FAQ</a>
+          <a class="text-brand" href="../../index.html">Facturación Boqi</a>
+          <a id="mobile-cta" class="rounded-full bg-brand px-5 py-2 text-center font-semibold text-dark shadow-glow" href="#" target="_blank" rel="noopener">
+            Pedir por WhatsApp
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="px-4 pb-12 pt-10 md:px-6">
+        <div class="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[1fr_0.85fr]">
+          <div class="pt-4 md:pt-8">
+            <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.2em] text-white/70">
+              <span class="h-2 w-2 rounded-full bg-brand"></span>
+              Seguridad de certificados
+            </div>
+            <h1 class="mt-6 font-display text-4xl font-bold leading-tight text-white md:text-5xl">
+              Cómo se protege y valida tu firma electrónica
+            </h1>
+            <p class="mt-6 max-w-2xl text-base text-white/70 md:text-lg">
+              Boqi te acompaña en la compra y recopilación segura de datos. La validación y emisión final del certificado depende del proveedor acreditado.
+            </p>
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <a id="hero-solicitar" href="#" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 rounded-full bg-brand px-8 py-3 text-sm font-semibold text-dark shadow-glow transition hover:-translate-y-0.5">
+                <i data-lucide="message-circle" class="h-4 w-4"></i>
+                Pedir mi firma por WhatsApp
+              </a>
+              <a href="../#precios" class="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-8 py-3 text-sm font-semibold text-white transition hover:border-brand/40">
+                Ver planes
+              </a>
+            </div>
+          </div>
+
+          <div class="rounded-[28px] border border-white/10 bg-white/5 p-6 shadow-xl">
+            <p class="text-sm uppercase tracking-[0.2em] text-brand">Lo esencial</p>
+            <div class="mt-6 space-y-4">
+              <div class="flex gap-4 rounded-2xl border border-white/10 bg-dark/50 p-4">
+                <i data-lucide="badge-check" class="mt-1 h-5 w-5 shrink-0 text-brand"></i>
+                <div>
+                  <h2 class="font-semibold">Entidad acreditada</h2>
+                  <p class="mt-1 text-sm text-white/65">Uanataca Ecuador S.A. consta como entidad acreditada ante ARCOTEL.</p>
+                </div>
+              </div>
+              <div class="flex gap-4 rounded-2xl border border-white/10 bg-dark/50 p-4">
+                <i data-lucide="fingerprint" class="mt-1 h-5 w-5 shrink-0 text-brand"></i>
+                <div>
+                  <h2 class="font-semibold">Certificado personal</h2>
+                  <p class="mt-1 text-sm text-white/65">El certificado identifica al titular mediante datos validados antes de su emisión.</p>
+                </div>
+              </div>
+              <div class="flex gap-4 rounded-2xl border border-white/10 bg-dark/50 p-4">
+                <i data-lucide="receipt-text" class="mt-1 h-5 w-5 shrink-0 text-brand"></i>
+                <div>
+                  <h2 class="font-semibold">Compatible con SRI</h2>
+                  <p class="mt-1 text-sm text-white/65">Uanataca indica compatibilidad de sus certificados con facturación electrónica SRI.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-t border-white/10 px-4 py-14 md:px-6">
+        <div class="mx-auto max-w-6xl">
+          <p class="text-sm uppercase tracking-[0.2em] text-white/60">Validación previa</p>
+          <h2 class="mt-4 font-display text-3xl font-semibold md:text-4xl">Qué se revisa antes de tramitar</h2>
+          <div class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+            <article class="rounded-3xl border border-white/10 bg-white/5 p-6">
+              <span class="font-display text-2xl font-bold text-brand">1</span>
+              <h3 class="mt-4 font-semibold">Datos del titular</h3>
+              <p class="mt-2 text-sm text-white/65">Cédula, nombres, correo, teléfono y datos requeridos para identificar al solicitante.</p>
+            </article>
+            <article class="rounded-3xl border border-white/10 bg-white/5 p-6">
+              <span class="font-display text-2xl font-bold text-brand">2</span>
+              <h3 class="mt-4 font-semibold">Documentos</h3>
+              <p class="mt-2 text-sm text-white/65">Cédula, foto con cédula y documentos adicionales según persona natural o empresa.</p>
+            </article>
+            <article class="rounded-3xl border border-white/10 bg-white/5 p-6">
+              <span class="font-display text-2xl font-bold text-brand">3</span>
+              <h3 class="mt-4 font-semibold">Consentimiento</h3>
+              <p class="mt-2 text-sm text-white/65">El cliente declara que la información enviada es real y autoriza el tratamiento necesario.</p>
+            </article>
+            <article class="rounded-3xl border border-white/10 bg-white/5 p-6">
+              <span class="font-display text-2xl font-bold text-brand">4</span>
+              <h3 class="mt-4 font-semibold">Revisión del proveedor</h3>
+              <p class="mt-2 text-sm text-white/65">La emisión final depende de la validación del proveedor acreditado.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-t border-white/10 bg-white/[0.02] px-4 py-14 md:px-6">
+        <div class="mx-auto max-w-6xl">
+          <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+            <div>
+              <p class="text-sm uppercase tracking-[0.2em] text-white/60">Respaldo verificable</p>
+              <h2 class="mt-4 font-display text-3xl font-semibold md:text-4xl">Fuentes oficiales</h2>
+              <p class="mt-5 text-white/65">
+                Estos enlaces apuntan a información pública. No publicamos contratos, manuales, credenciales ni procesos internos del proveedor.
+              </p>
+            </div>
+            <div class="grid gap-4 md:grid-cols-2">
+              <a class="rounded-3xl border border-white/10 bg-white/5 p-5 transition hover:border-brand/50" href="https://www.arcotel.gob.ec/listado-de-las-entidades-de-certificacion-de-informacion-y-servicios-relacionados-acreditados-y-terceros-vinculados-debidamente-acreditadas/" target="_blank" rel="noopener">
+                <h3 class="font-semibold text-brand">ARCOTEL</h3>
+                <p class="mt-2 text-sm text-white/65">Listado público de entidades de certificación acreditadas.</p>
+              </a>
+              <a class="rounded-3xl border border-white/10 bg-white/5 p-5 transition hover:border-brand/50" href="https://web.uanataca.com/ec/politicas-practicas" target="_blank" rel="noopener">
+                <h3 class="font-semibold text-brand">Políticas y prácticas</h3>
+                <p class="mt-2 text-sm text-white/65">Documentos públicos de certificación y política de seguridad.</p>
+              </a>
+              <a class="rounded-3xl border border-white/10 bg-white/5 p-5 transition hover:border-brand/50" href="https://web.uanataca.com/ec/certificados-ca" target="_blank" rel="noopener">
+                <h3 class="font-semibold text-brand">Certificados CA</h3>
+                <p class="mt-2 text-sm text-white/65">CA raíz, sub CA, sello de tiempo y cadena de confianza.</p>
+              </a>
+              <a class="rounded-3xl border border-white/10 bg-white/5 p-5 transition hover:border-brand/50" href="https://uanataca.ec/posts/post-certificacionISO" target="_blank" rel="noopener">
+                <h3 class="font-semibold text-brand">ISO/IEC 27001</h3>
+                <p class="mt-2 text-sm text-white/65">Publicación de Uanataca Ecuador sobre certificación de seguridad de la información.</p>
+              </a>
+              <a class="rounded-3xl border border-white/10 bg-white/5 p-5 transition hover:border-brand/50" href="https://web.uanataca.com/ec/faqs/certificado-digital/que-es-un-certificado-acreditado-de-firma-electronica" target="_blank" rel="noopener">
+                <h3 class="font-semibold text-brand">Certificado acreditado</h3>
+                <p class="mt-2 text-sm text-white/65">Explicación pública de Uanataca sobre certificado acreditado.</p>
+              </a>
+              <a class="rounded-3xl border border-white/10 bg-white/5 p-5 transition hover:border-brand/50" href="https://web.uanataca.com/ec/faqs/certificado-digital/certificados-digitales-uanataca-facturacion-electronica" target="_blank" rel="noopener">
+                <h3 class="font-semibold text-brand">Facturación electrónica</h3>
+                <p class="mt-2 text-sm text-white/65">Compatibilidad indicada por Uanataca para facturación electrónica SRI.</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-t border-white/10 px-4 py-14 md:px-6">
+        <div class="mx-auto grid max-w-6xl gap-6 lg:grid-cols-2">
+          <article class="rounded-3xl border border-brand/30 bg-brand/10 p-7">
+            <i data-lucide="check-circle-2" class="h-7 w-7 text-brand"></i>
+            <h2 class="mt-5 font-display text-2xl font-semibold">Lo que hace Boqi</h2>
+            <p class="mt-3 text-white/70">
+              Boqi guía la venta, registra el pago, habilita un formulario privado, recopila la información necesaria y acompaña la solicitud hasta la entrega.
+            </p>
+          </article>
+          <article class="rounded-3xl border border-white/10 bg-white/5 p-7">
+            <i data-lucide="shield-alert" class="h-7 w-7 text-brand"></i>
+            <h2 class="mt-5 font-display text-2xl font-semibold">Lo que depende del proveedor</h2>
+            <p class="mt-3 text-white/70">
+              La validación final, emisión, corrección o rechazo del certificado depende de la revisión del proveedor acreditado y sus políticas vigentes.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="border-t border-white/10 bg-white/[0.02] px-4 py-14 md:px-6">
+        <div class="mx-auto max-w-3xl">
+          <h2 class="font-display text-3xl font-semibold md:text-4xl">Preguntas de seguridad</h2>
+          <div class="mt-8 space-y-3">
+            <details class="group rounded-2xl border border-white/10 bg-white/5 p-5">
+              <summary class="cursor-pointer list-none font-semibold text-white group-open:text-brand">¿Boqi es la entidad certificadora?</summary>
+              <p class="mt-3 text-sm text-white/65">No. Boqi gestiona el trámite y atención comercial. La emisión del certificado corresponde al proveedor acreditado.</p>
+            </details>
+            <details class="group rounded-2xl border border-white/10 bg-white/5 p-5">
+              <summary class="cursor-pointer list-none font-semibold text-white group-open:text-brand">¿Por qué piden documentos?</summary>
+              <p class="mt-3 text-sm text-white/65">Porque el certificado debe corresponder al titular. Los documentos permiten validar identidad y perfil de solicitud.</p>
+            </details>
+            <details class="group rounded-2xl border border-white/10 bg-white/5 p-5">
+              <summary class="cursor-pointer list-none font-semibold text-white group-open:text-brand">¿Sirve para facturación electrónica?</summary>
+              <p class="mt-3 text-sm text-white/65">Uanataca indica públicamente que sus certificados digitales son compatibles con facturación electrónica SRI.</p>
+            </details>
+          </div>
+          <div class="mt-10 text-center">
+            <a id="security-bottom-wa" href="#" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 rounded-full bg-brand px-8 py-3 text-sm font-semibold text-dark shadow-glow transition hover:-translate-y-0.5">
+              <i data-lucide="message-circle" class="h-4 w-4"></i>
+              Pedir mi firma por WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/10 px-4 py-10 text-center text-sm text-white/50 md:px-6">
+      <p>© <span id="year"></span> Boqi · Ecuador</p>
+      <p class="mt-2">Trámite gestionado por Boqi con proveedor acreditado. No somos el SRI ni sustituimos asesoría tributaria.</p>
+      <p class="mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+        <a href="../" class="text-brand hover:underline">Firmas Boqi</a>
+        <a href="../../index.html" class="hover:text-white">Facturación Boqi</a>
+        <a href="../../contacto.html" class="hover:text-white">Contacto</a>
+      </p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      function waUrl() {
+        const c = window.BOQI_FIRMAS || {};
+        if (!c.whatsappE164) return null;
+        const text = encodeURIComponent(c.whatsappText || "Hola, quiero tramitar mi firma electrónica con Boqi");
+        return "https://wa.me/" + c.whatsappE164.replace(/\D/g, "") + "?text=" + text;
+      }
+
+      function applyCtas() {
+        const c = window.BOQI_FIRMAS || {};
+        const messenger = c.messengerUrl || "https://m.me/61579412811926";
+        const wa = waUrl();
+
+        ["nav-cta", "mobile-cta", "hero-solicitar", "security-bottom-wa"].forEach((id) => {
+          const el = document.getElementById(id);
+          if (el) {
+            el.href = wa || messenger;
+            el.setAttribute("target", "_blank");
+            el.setAttribute("rel", "noopener");
+          }
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        applyCtas();
+        lucide.createIcons();
+
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const iconOpen = document.getElementById("icon-open");
+        const iconClose = document.getElementById("icon-close");
+        menuBtn?.addEventListener("click", () => {
+          const open = mobileMenu.classList.toggle("hidden");
+          menuBtn.setAttribute("aria-expanded", String(!open));
+          iconOpen.classList.toggle("hidden", !open);
+          iconClose.classList.toggle("hidden", open);
+        });
+      });
+    </script>
+  </body>
+</html>
